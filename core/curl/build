@@ -13,6 +13,7 @@
     --without-librtmp \
     --without-icu \
     --without-libpsl \
+    --without-zstd \
     --with-pic \
     --with-bearssl \
     --with-ca-bundle=/etc/certificates/cert.pem \

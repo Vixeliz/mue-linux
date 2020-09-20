@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+./configure \
+	--prefix=/usr \
+	--disable-nls \
+        --enable-shared \
+        --enable-static
+
+make
+make DESTDIR="$1" install

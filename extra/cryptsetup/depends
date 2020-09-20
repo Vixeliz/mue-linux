@@ -1,4 +1,5 @@
 json-c
+libgcrypt
 lvm2
 pkgconf make
 popt

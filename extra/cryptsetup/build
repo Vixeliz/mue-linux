@@ -7,6 +7,7 @@ machine=$(cc -dumpmachine)
     --sbindir=/usr/bin \
     --build="$machine" \
     --host="$machine" \
+    --with-crypto_backend=gcrypt \
     --disable-blkid
 
 make
