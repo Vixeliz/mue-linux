@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "You must create a symlink from /usr/lib/libGLESv2.so to /usr/lib/libGL.so.1"
+echo "If you have bubblewrap sandbox installed it will automatically build with that"

@@ -1,0 +1,25 @@
+#!/bin/sh -e
+
+:> nostrip
+
+#GCC10 fix
+export CFLAGS="$CFLAGS -fcommon"
+
+export DESTDIR="$1"
+
+meson \
+	--prefix=/usr \
+	-Dexamples=false \
+        -Dlibcap=disabled \
+        -Dlogind=disabled \
+        -Dlibseat=enabled \
+	-Dxcb-errors=disabled \
+        -Dxcb-icccm=disabled \
+        -Dxcb-xkb=disabled \
+        -Dxwayland=disabled \
+        -Dx11-backend=disabled \
+	-Dfreerdp=disabled \
+	. build
+
+ninja -C build
+ninja -C build install

@@ -1,0 +1,4 @@
+https://gitlab.com/chinstrap/gammastep/-/archive/v2.0.2/gammastep-v2.0.2.tar.gz
+files/configure.patch
+files/makefile.patch
+files/makefilesrc.patch

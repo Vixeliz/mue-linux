@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cat <<EOF
+NOTE: If using encryption you must now install
+      the 'kiss-encryption' package.
+
+EOF

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cat <<EOF
+
+NOTE: To properly set foot's font, copy the config file
+      in /usr/share/foot/footrc to ~/.config/foot/foot.ini
+      and uncomment the font=monospace line.
+
+EOF

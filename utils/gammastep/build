@@ -1,0 +1,19 @@
+#!/bin/sh -e
+
+patch -p1 < makefile.patch
+patch -p1 < configure.patch
+
+cd src
+
+patch -p1 < ../makefilesrc.patch
+
+cd ..
+
+autoreconf --verbose --force --install
+
+./configure \
+	--prefix=/usr
+
+make
+
+install -Dm755 src/gammastep "$1/usr/bin/gammastep"

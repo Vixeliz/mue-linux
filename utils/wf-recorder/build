@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+# Only using the latest git build until a new release is made to support
+# building without pulseaudio.
+
+export DESTDIR="$1"
+
+meson \
+    --prefix=/usr \
+    . output
+
+ninja -C output
+ninja -C output install

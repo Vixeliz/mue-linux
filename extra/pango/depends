@@ -1,0 +1,7 @@
+cairo
+fontconfig
+freetype-harfbuzz
+fribidi
+glib
+meson   make
+pkgconf make

@@ -1,0 +1,7 @@
+cairo
+gdk-pixbuf
+flex make
+meson make
+samurai make
+wayland
+wayland-protocols make

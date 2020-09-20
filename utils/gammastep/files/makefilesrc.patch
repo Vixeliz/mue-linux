@@ -1,0 +1,11 @@
+--- Makefile.am
++++ Makefile.am
+@@ -29,7 +29,7 @@
+ 	location-geoclue2.c location-geoclue2.h
+ 
+ AM_CFLAGS =
+-gammastep_LDADD = @LIBINTL@
++gammastep_LDADD =
+ EXTRA_DIST = gamma-control.xml orbital-authorizer.xml
+ 
+ if ENABLE_DRM

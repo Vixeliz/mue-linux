@@ -1,0 +1,14 @@
+cairo
+flex make
+gdk-pixbuf
+json-c
+linux-headers make
+meson make
+pango
+pcre
+samurai make
+scdoc
+swaybg
+wayland
+wayland-protocols make
+wlroots

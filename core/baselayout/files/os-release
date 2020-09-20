@@ -1,0 +1,8 @@
+NAME="MUE Linux"
+PRETTY_NAME="MUE Linux"
+ID=mue
+BUILD_ID=rolling
+HOME_URL="https://muevoid.org"
+DOCUMENTATION_URL="https://muevoid.org"
+SUPPORT_URL="https://github.com/muevoid"
+BUG_REPORT_URL="https://github.com/muevoid"

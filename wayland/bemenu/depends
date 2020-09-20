@@ -1,0 +1,5 @@
+cairo
+pango
+libxkbcommon make
+wayland-protocols
+wayland

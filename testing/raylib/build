@@ -1,0 +1,24 @@
+#!/bin/sh -e
+
+cmake -B build \
+    -Wno-dev \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_C_FLAGS="$CFLAGS -fPIC -w" \
+    -D USE_EXTERNAL_GLFW=ON \
+    -D BUILD_EXAMPLES=OFF \
+    -D USE_WAYLAND=ON \
+    -D BUILD_GAMES=OFF \
+    -D SHARED=ON \
+    -D STATIC=OFF \
+    -D WITH_PIC=ON \
+    -G Ninja
+
+DESTDIR="$1" ninja -C build
+DESTDIR="$1" ninja -C build install
+
+# Also package header files
+for f in build/src/*.h; do
+  install -Dm 644 "$f" "$1/usr/include/$(basename "$f")"
+done

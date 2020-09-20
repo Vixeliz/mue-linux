@@ -1,0 +1,26 @@
+-----------------------------------------------------------------------------------
+ __  __
+|  \/  |
+| |\/| |                                                        
+|_|  |_|UE Linux						https://muevoid.org
+___________________________________________________________________________________
+
+Mue Linux is an attempt at a minimalistic linux system with strong ideals.
+You can find more information about the ideals here https://muevoid.org/ideals
+
+Here is an overview:
+- No rust
+- No bash
+- Try to make things portable where possible and allow for people to submit patches for certain architectures other then x86_64
+- Wayland only, No xorg libraries(only one needed is libxkbcommon)
+- Everything must be able to be built without an internet connection
+- Emphasis at hacking your system and creating utilities
+- Not losing security at the cost of simplicity(why some choices are made such as libtasn1 for webkit2gtk.)
+
+Note all of these if you don't agree with nothing stops you from packaging them for yourself. These just apply to the official repo and community repo(if there ever is one).
+
+Stuff I'd like to do:
+- a /pkg file system so every package has their own directory
+- An install helper script to make install's a little faster for repetive task.
+- A live cd
+- Rewrite the kiss pkg manager in c with some features i'd like addded as well.

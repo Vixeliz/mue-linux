@@ -1,0 +1,12 @@
+bison        make
+expat
+flex         make
+libdrm
+libelf
+linux-headers make
+llvm
+m4            make
+meson         make
+pkgconf       make
+python        make
+zlib

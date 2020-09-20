@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+./build
+install -Dm755 wayherb "$1/usr/bin/wayherb"
