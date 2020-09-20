@@ -1,0 +1,8 @@
+cmake make
+glib
+libepoxy
+libffi
+libwpe
+libxkbcommon
+wayland
+zlib
