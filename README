@@ -8,6 +8,9 @@ ________________________________________________________________________________
 Mue Linux is an attempt at a minimalistic linux system with strong ideals.
 You can find more information about the ideals here https://muevoid.org/ideals
 
+Huge thanks to dylanaraps for kiss linux which muelinux is based off of. See https://k1ss.org
+
+
 Here is an overview:
 - No rust
 - No bash
