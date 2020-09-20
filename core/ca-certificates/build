@@ -1,3 +1,0 @@
-#!/bin/sh -e
-
-install -Dm755 cert.sh "$1/usr/bin/update-certdata"

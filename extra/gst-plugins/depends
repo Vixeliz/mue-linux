@@ -1,5 +1,4 @@
 alsa-lib
-bearssl
 ffmpeg
 gdk-pixbuf
 gstreamer
@@ -7,6 +6,7 @@ gst-plugins-base
 lame
 libpng
 libsoup
+libressl
 libvorbis
 libvpx
 libwebp

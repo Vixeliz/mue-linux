@@ -1,7 +1,7 @@
-bearssl
 cairo
 jbig2dec
 libjpeg-turbo
+lirbessl
 libmupdf make
 meson make
 openjpeg2
