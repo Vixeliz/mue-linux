@@ -14,7 +14,9 @@
     --without-icu \
     --without-libpsl \
     --with-pic \
-    --with-ca-fallback
+    --with-bearssl \
+    --with-ca-bundle=/etc/certificates/cert.pem \
+    --without-ssl
 
 make curl_LDFLAGS=-all-static
 make DESTDIR="$1" install
