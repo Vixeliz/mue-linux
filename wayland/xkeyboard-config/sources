@@ -1,0 +1,11 @@
+https://x.org/releases/individual/data/xkeyboard-config/xkeyboard-config-2.30.tar.bz2
+files/xml2lst rules
+files/compose.dir
+files/locale.alias
+files/locale.dir
+files/Compose.C
+files/XI18N_OBJS.C
+files/XLC_LOCALE.C
+files/Compose.us
+files/XI18N_OBJS.us
+files/XLC_LOCALE.us

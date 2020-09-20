@@ -1,0 +1,29 @@
+#!/bin/sh -e
+
+# Swap to shell script instead of perl script
+# for conversion of rules files. See files/xml2lst.
+sed -i 's/perl //;s/xml2lst\.pl/xml2lst/' rules/Makefile.in
+
+./configure \
+    --prefix=/usr \
+    --with-xkb-rules-symlink=xfree86,xorg \
+    --enable-compat-rules \
+    --without-xsltproc \
+    --disable-nls \
+    --disable-runtime-deps
+
+make
+make DESTDIR="$1" install
+
+# To evade libX11 and its deps, we will carry around our own locale files.
+#Programs like foot seem to require it; presumably becuase musl has /poor/
+#locale support.
+install -Dm644 locale.alias  "$1/usr/share/X11/locale/locale.alias"
+install -Dm644 locale.dir    "$1/usr/share/X11/locale/locale.dir"
+install -Dm644 compose.dir    "$1/usr/share/X11/locale/compose.dir"
+install -Dm644 Compose.C     "$1/usr/share/X11/locale/C/Compose"
+install -Dm644 XI18N_OBJS.C  "$1/usr/share/X11/locale/C/XI18N_OBJS.C"
+install -Dm644 XLC_LOCALE.C  "$1/usr/share/X11/locale/C/XLC_LOCALE"
+install -Dm644 Compose.us    "$1/usr/share/X11/locale/en_US.UTF-8/Compose"
+install -Dm644 XI18N_OBJS.us "$1/usr/share/X11/locale/en_US.UTF-8/XI18N_OBJS" 
+install -Dm644 XLC_LOCALE.us "$1/usr/share/X11/locale/en_US.UTF-8/XLC_LOCALE" 
