@@ -5,7 +5,8 @@ export DESTDIR="$1"
 meson \
     --prefix=/usr \
     -Denable-docs=false \
-    -Denable-wayland=false \
+    -Denable-x11=false \
+    -Denable-wayland=true \
     -Denable-xkbregistry=false \
     . output
 
