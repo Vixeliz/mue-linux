@@ -5,7 +5,6 @@ gdk-pixbuf
 gstreamer
 gst-plugins-base
 lame
-lcms
 libpng
 libsoup
 libvorbis
