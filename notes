@@ -1,0 +1,4 @@
+Packages that need updates but have problems atm:
+libsoup
+glib-networking
+socat
