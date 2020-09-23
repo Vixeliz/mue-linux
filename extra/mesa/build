@@ -39,6 +39,7 @@ meson \
     --localstatedir=/var \
     --buildtype=release \
     -Dplatforms=wayland,drm \
+    -Dgles3=true \
     -Dglx=disabled \
     . output
 
