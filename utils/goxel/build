@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+cd src
+patch -p1 < ../fixgles2.patch
+cd ..
+patch -p1 < gles2link.patch
+
+scons mode=release yocto=0
+install -Dm755 goxel "$1/usr/bin/goxel"

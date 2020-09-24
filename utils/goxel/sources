@@ -1,0 +1,3 @@
+git+https://github.com/guillaumechereau/goxel
+patches/fixgles2.patch
+patches/gles2link.patch
