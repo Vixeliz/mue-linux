@@ -23,7 +23,6 @@ Here is an overview:
 Note all of these if you don't agree with nothing stops you from packaging them for yourself. These just apply to the official repo and community repo(if there ever is one).
 
 Stuff I'd like to do:
-- a /pkg file system so every package has their own directory
 - An install helper script to make install's a little faster for repetive task.
 - A live cd
 - Rewrite the kiss pkg manager in c with some features i'd like addded as well.
