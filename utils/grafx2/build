@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+export API="sdl2"
+
+cd grafx2
+
+sed -i 's/defined(__macosx__)/!defined(__GLIBC__)/' src/init.c
+
+make -C src
+make -C src DESTDIR="$1" PREFIX=/usr install
+install -Dm755 bin/grafx2-sdl2 "$1/usr/bin/grafx2"
