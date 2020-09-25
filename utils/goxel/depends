@@ -1,0 +1,3 @@
+glfw
+gtk+3
+scons make
