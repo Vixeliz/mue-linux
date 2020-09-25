@@ -14,11 +14,12 @@ Huge thanks to dylanaraps for kiss linux which muelinux is based off of. See htt
 Here is an overview:
 - No rust
 - No bash
-- Try to make things portable where possible and allow for people to submit patches for certain architectures other then x86_64
-- Wayland only, No xorg libraries(only a few needed but most aren't really "Xorg" libs anymore no libX11 needed at all)
+- Try to make things portable and allow for people to submit patches for certain architectures other then x86_64
+- Wayland only, No xorg libraries(only a few needed but most aren't really "Xorg" libs anymore)
 - Everything must be able to be built without an internet connection(working on this)
-- Emphasis at hacking your system and creating utilities(will be working on how to make this more obvious)
-- Not losing security at the cost of simplicity(why some choices are made such as libtasn1 for webkit2gtkor seatd wlroots)
+- Emphasis at hacking your system and creating utilities(Thinking of ideas to promote this)
+- Not losing security at the cost of simplicity
+(why some choices are made such as libtasn1 for webkit2gtkor seatd wlroots)
 
 Note all of these if you don't agree with nothing stops you from packaging them for yourself.
 These just apply to the official repo and community repo(if there ever is one).
@@ -32,5 +33,8 @@ Stuff I'd like to do:
 (working on figuring out exactly what would be needed to do this)
 
 Reasons for certain packages:
-Most of these packages are mainly due to them being needed by me; however, I am going to split up the repo more at some point soon.
-For example things like goxel or grafx2. My goal is to have a flexible repo where people can only have the packages needed for their system and no more.
+Most of these packages are mainly due to them being needed by me;
+however, I am going to split up the repo more at some point soon.
+
+For example things like goxel or grafx2.
+My goal is to have a flexible repo where it has a minimal base for people to build upon.
