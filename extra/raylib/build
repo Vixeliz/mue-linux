@@ -4,6 +4,8 @@ export DESTDIR="$1"
 
 ( cd src; patch -p1 < ../X11.patch; cd .. )
 
+# Most of these options are just personal preference this pkg is highly opionated.
+# The main changes are basically no 3D features and no gesture system
 cmake -GNinja -B build \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_PREFIX_PATH=/usr \
@@ -14,6 +16,15 @@ cmake -GNinja -B build \
     -DUSE_EXTERNAL_GLFW=ON \
     -DUSE_WAYLAND=ON \
     -DSHARED=ON \
+    -DSUPPORT_VR_SIMULATOR=OFF \
+    -DSUPPORT_HIGH_DPI=ON \
+    -DSUPPORT_MESH_GENERATION=OFF \
+    -DSUPPORT_FILEFORMAT_OBJ=OFF \
+    -DSUPPORT_FILEFORMAT_MTL=OFF \
+    -DSUPPORT_FILEFORMAT_IQM=OFF \
+    -DSUPPORT_FILEFORMAT_GLTF=OFF \
+    -DSUPPORT_GESTURES_SYSTEM=OFF \
+    -DSUPPORT_MOUSE_GESTURES=OFF \
     -DGRAPHICS="GRAPHICS_API_OPENGL_ES2"
 
 sed -i 's/-lGL/-lGLESv2/g' build/build.ninja
