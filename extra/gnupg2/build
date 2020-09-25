@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+export LDFLAGS="$LDFLAGS -static"
+
+./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --disable-gnutls
+
+make
+make DESTDIR="$1" install
