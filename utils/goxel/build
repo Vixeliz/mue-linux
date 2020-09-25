@@ -1,8 +1,7 @@
 #!/bin/sh -e
 
-cd src
-patch -p1 < ../fixgles2.patch
-cd ..
+( cd src; patch -p1 < ../fixgles2.patch )
+
 patch -p1 < gles2link.patch
 
 scons mode=release yocto=0

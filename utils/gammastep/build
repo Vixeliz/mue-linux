@@ -3,11 +3,7 @@
 patch -p1 < makefile.patch
 patch -p1 < configure.patch
 
-cd src
-
-patch -p1 < ../makefilesrc.patch
-
-cd ..
+( cd src; patch -p1 < ../makefilesrc.patch )
 
 autoreconf --verbose --force --install
 
