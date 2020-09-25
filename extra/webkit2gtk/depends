@@ -5,7 +5,7 @@ gperf  make
 gst-plugins
 gtk+3
 harfbuzz-icu
-lcms2
+lcms
 libXslt
 libgcrypt
 libtasn1

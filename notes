@@ -6,3 +6,7 @@ socat
 Some pkgs that currently cant be built offline:
 any git packages
 any go packages
+
+Ideas for package manager:
+git caching then checksums against latest master,
+or for depends for example mesa || mesa-intel for building chooses first one by default but will accept second one
