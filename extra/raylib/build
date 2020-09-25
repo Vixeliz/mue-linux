@@ -1,0 +1,22 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+( cd src; patch -p1 < ../X11.patch; cd .. )
+
+cmake -GNinja -B build \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_PREFIX_PATH=/usr \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib \
+    -DBUILD_EXAMPLES=OFF \
+    -DBUILD_GAMES=OFF \
+    -DUSE_EXTERNAL_GLFW=ON \
+    -DUSE_WAYLAND=ON \
+    -DSHARED=ON \
+    -DGRAPHICS="GRAPHICS_API_OPENGL_ES2"
+
+sed -i 's/-lGL/-lGLESv2/g' build/build.ninja
+
+ninja -C build
+ninja -C build install
