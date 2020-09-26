@@ -1,7 +1,5 @@
 Packages that need updates but have problems atm:
-libsoup
-glib-networking
-socat
+socat(Shows up as outdated but new version is beta)
 
 Some pkgs that currently cant be built offline:
 any git packages

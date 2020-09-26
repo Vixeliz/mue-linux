@@ -7,7 +7,7 @@ meson \
     --sysconfdir=/etc \
     --localstatedir=/var \
     -Dlibproxy=disabled \
-    -Dopenssl=enabled \
+    -Dgnutls=enabled \
     . output
 
 ninja -C output

@@ -1,3 +1,4 @@
 glib
+gnutls
 libressl
 meson make
