@@ -37,5 +37,4 @@ Reasons for certain packages:
 Most of these packages are mainly due to them being needed by me;
 however, I am going to split up the repo more at some point soon.
 
-For example things like goxel or grafx2.
 My goal is to have a flexible repo where it has a minimal base for people to build upon.
