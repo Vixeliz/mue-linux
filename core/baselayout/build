@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # Setup base directories.
-for d in boot dev etc home mnt var bin sucks; do
+for d in boot dev etc home mnt var bin run sucks; do
     install -dm 755 "$1/$d"
 done
 
@@ -15,7 +15,9 @@ for d in 1 2 3 4 5 6 7 8; do
     install -dm 755 "$1/share/man/man$d"
 done
 
-# Add symlinks.
+#Add symlinks.
+ln -s / "$1/usr"
+ln -s /bin "$1/sbin"
 
 # Setup /var.
 for d in cache local opt log/old lib/misc empty service run lock; do

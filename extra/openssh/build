@@ -12,7 +12,7 @@
     --without-rpath \
     --disable-strip \
     --with-ssl-engine \
-    --with-pid-dir=/var/run \
+    --with-pid-dir=/run \
     --disable-wtmp \
     --disable-utmp
 
