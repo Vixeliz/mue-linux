@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # Setup base directories.
-for d in boot dev etc home mnt var bin share lib include usr sucks; do
+for d in boot dev etc home mnt var bin sucks; do
     install -dm 755 "$1/$d"
 done
 
