@@ -8,10 +8,10 @@ pkg-config --exists libudev || {
 }
 
 meson \
-    --prefix=/usr \
+    --prefix= \
     --sysconfdir=/etc \
-    --mandir=/usr/share/man \
-    --libexecdir=/usr/lib \
+    --mandir=/share/man \
+    --libexecdir=/lib \
     -Ddebug-gui=false \
     -Ddocumentation=false \
     -Dtests=false \

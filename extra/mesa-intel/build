@@ -7,12 +7,12 @@
 
     python3 setup.py build
     python3 setup.py install \
-        --prefix=/usr \
+        --prefix= \
         --root="$PWD/dist"
 
     # Use a glob to avoid having to figure out the Python
     # version for the path below.
-    cd dist/usr/lib/python*/site-packages
+    cd dist/lib/python*/site-packages
 
     # Set the PYTHONPATH so python knows where to find mako.
     # The one liner simply appends the existing path and
@@ -33,9 +33,9 @@ export CFLAGS="$CFLAGS -DGLX_X86_READONLY_TEXT"
 sed -i "/pre_args += '-DUSE_ELF_TLS'/d" meson.build
 
 meson \
-    --prefix=/usr \
+    --prefix= \
     --sysconfdir=/etc \
-    --mandir=/usr/share/man \
+    --mandir=/share/man \
     --localstatedir=/var \
     --buildtype=release \
     -Dplatforms=drm,wayland \

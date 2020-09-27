@@ -4,9 +4,9 @@ make MYCFLAGS="$CFLAGS -fPIC" \
      MYLDFLAGS="$LDFLAGS" \
      posix
 
-make INSTALL_TOP="$1/usr" \
-     INSTALL_MAN="$1/usr/share/man/man1" \
+make INSTALL_TOP="$1" \
+     INSTALL_MAN="$1/share/man/man1" \
      INSTALL_DATA="cp -d" \
      install
 
-install -Dm 644 lua.pc "$1/usr/lib/pkgconfig/lua.pc"
+install -Dm 644 lua.pc "$1/lib/pkgconfig/lua.pc"

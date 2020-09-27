@@ -6,7 +6,7 @@ for plugin in libav good bad ugly; do (
     cd "$plugin"
 
     meson \
-        --prefix=/usr \
+        --prefix= \
         -Dexample=false \
         -Dqt5=disabled \
         . output

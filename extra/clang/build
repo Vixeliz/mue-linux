@@ -3,7 +3,7 @@
 export DESTDIR="$1"
 
 cmake -B build \
-    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_PREFIX=/ \
     -DCMAKE_BUILD_TYPE=Release \
     -DLLVM_ENABLE_RTTI=ON \
     -DLLVM_ENABLE_EH=ON \
@@ -20,10 +20,10 @@ cmake --install build
 # Fix up libexec location. This can't be done during
 # the configure stage of the build as it is hardcoded.
 {
-    mv -f "$1/usr/libexec/ccc-analyzer" "$1/usr/lib/clang"
-    mv -f "$1/usr/libexec/c++-analyzer" "$1/usr/lib/clang"
+    mv -f "$1/libexec/ccc-analyzer" "$1/lib/clang"
+    mv -f "$1/libexec/c++-analyzer" "$1/lib/clang"
 
-    rmdir "$1/usr/libexec"
+    rmdir "$1/libexec"
 
-    sed -i 's|libexec|lib/clang|' "$1/usr/bin/scan-build"
+    sed -i 's|libexec|lib/clang|' "$1/bin/scan-build"
 }

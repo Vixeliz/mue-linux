@@ -1,10 +1,10 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/usr \
+    --prefix= \
     --sysconfdir=/etc
 
 make
 make DESTDIR="$1" install
 
-ln -s pkgconf "$1/usr/bin/pkg-config"
+ln -s pkgconf "$1/bin/pkg-config"

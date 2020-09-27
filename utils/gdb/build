@@ -12,7 +12,7 @@ mkdir _build
 cd _build
 
 ../configure \
-    --prefix=/usr \
+    --prefix= \
     --without-installed-readline \
     --disable-nls
 

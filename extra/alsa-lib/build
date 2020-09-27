@@ -2,7 +2,7 @@
 
 ./configure \
     --without-debug \
-    --prefix=/usr
+    --prefix=/
 
 make
 make DESTDIR="$1" install

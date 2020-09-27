@@ -3,7 +3,7 @@
 patch -p0 < libtheora-1.1.1-libpng16.patch
 
 ./configure \
-    --prefix=/usr
+    --prefix=
 
 make
 make DESTDIR="$1" install

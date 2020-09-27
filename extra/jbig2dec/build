@@ -3,7 +3,7 @@
 autoreconf -fi
 
 ./configure \
-    --prefix=/usr
+    --prefix=
 
 make
 make DESTDIR="$1" install

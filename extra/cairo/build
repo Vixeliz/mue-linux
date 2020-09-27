@@ -8,7 +8,7 @@ sed -i "s/BUILD_SPHINX_FALSE='#'/BUILD_SPHINX_FALSE=/" configure
 sed -i 's/test perf//g' Makefile.in
 
 ./configure \
-    --prefix=/usr \
+    --prefix=/ \
     --disable-static \
     --enable-tee \
     --enable-glesv2 \

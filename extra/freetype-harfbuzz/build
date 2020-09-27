@@ -5,7 +5,7 @@ build_freetype() (
 
     CFLAGS="$CFLAGS -DDEFAULT_TT_INTERPRETER_VERSION=TT_INTERPRETER_VERSION_40" \
     ./configure \
-        --prefix=/usr \
+        --prefix= \
         --enable-freetype-config \
         --with-harfbuzz="$2"
 
@@ -15,16 +15,16 @@ build_freetype() (
 
 build_harfbuzz() (
     # Point Harfbuzz to the Freetype files.
-    export CFLAGS="$CFLAGS -I$1/usr/include/freetype2"
-    export CXXFLAGS="$CXXFLAGS -I$1/usr/include/freetype2"
-    export LDFLAGS="$LDFLAGS -L$1/usr/lib"
+    export CFLAGS="$CFLAGS -I$1/include/freetype2"
+    export CXXFLAGS="$CXXFLAGS -I$1/include/freetype2"
+    export LDFLAGS="$LDFLAGS -L$1/lib"
 
     cd harfbuzz
 
     export DESTDIR="$1"
     meson \
-        --prefix=/usr \
-        -Dpkg_config_path="$1/usr/lib/pkgconfig" \
+        --prefix= \
+        -Dpkg_config_path="$1/lib/pkgconfig" \
         -Ddefault_library=both \
         -Dglib=enabled \
         -Dfreetype=enabled \

@@ -3,11 +3,11 @@
 export DESTDIR="$1"
 
 meson \
-	--prefix=/usr \
+	--prefix=/ \
 	. build
 
 ninja -C build
 ninja -C build install
 
-rm -rf "$1/usr/share/zsh/"
-rm -rf "$1/usr/share/bash-completion/"
+rm -rf "$1/share/zsh/"
+rm -rf "$1/share/bash-completion/"

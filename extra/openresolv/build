@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/usr \
-    --sbindir=/usr/bin \
+    --prefix= \
+    --sbindir=/bin \
     --sysconfdir=/etc
 
 make

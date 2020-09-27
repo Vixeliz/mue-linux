@@ -19,8 +19,8 @@ export MKDIR_P="install -d"
 export CONFIG_SHELL=/bin/sh
 
 ./configure \
-    --prefix=/usr \
-    --sbindir=/usr/bin \
+    --prefix= \
+    --sbindir=/bin \
     --sysconfdir=/etc \
     --localstatedir=/var \
     --disable-selinux \
@@ -37,6 +37,6 @@ export CONFIG_SHELL=/bin/sh
 make DESTDIR="$1" install
 
 # Make all libraries and binaries writable.
-chmod u+w "$1/usr/lib/"* \
-          "$1/usr/include/"* \
-          "$1/usr/bin/"*
+chmod u+w "$1/lib/"* \
+          "$1/include/"* \
+          "$1/bin/"*

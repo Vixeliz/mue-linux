@@ -3,15 +3,15 @@
 export DESTDIR="$1"
 
 meson \
-	--prefix=/usr \
+	--prefix=/ \
 	. build
 
 ninja -C build
 ninja -C build install
 
-chmod a+s "$1/usr/bin/swaylock"
+chmod a+s "$1/bin/swaylock"
 
-rm -rf "$1/usr/share/zsh/"
-rm -rf "$1/usr/share/fish/"
-rm -rf "$1/usr/share/bash-completion/"
+rm -rf "$1/share/zsh/"
+rm -rf "$1/share/fish/"
+rm -rf "$1/share/bash-completion/"
 rm -rf "$1/etc/pam.d/"

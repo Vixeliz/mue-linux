@@ -6,9 +6,9 @@ export DESTDIR="$1"
 sed -i "/subdir('tests')/d" meson.build
 
 meson \
-    --prefix=/usr \
+    --prefix=/ \
     --sysconfdir=/etc \
-    --mandir=/usr/share/man \
+    --mandir=/share/man \
     -Ddocs=false \
     -Dintrospection=false \
     . output

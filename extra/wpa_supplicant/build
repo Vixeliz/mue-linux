@@ -12,9 +12,9 @@ export CFLAGS="$CFLAGS -static -D_GNU_SOURCE -DLIBNL1_COMPAT"
 
 cd wpa_supplicant
 
-make LIBDIR=/usr/lib BINDIR=/usr/bin DRV_LIBS="$CFLAGS" CC="${CC:-cc}"
-make LIBDIR=/usr/lib BINDIR=/usr/bin DESTDIR="$1" install
+make LIBDIR=/lib BINDIR=/bin DRV_LIBS="$CFLAGS" CC="${CC:-cc}"
+make LIBDIR=/lib BINDIR=/bin DESTDIR="$1" install
 
-install -Dm644 doc/docbook/*.8 "$1/usr/share/man/man8"
-install -Dm644 doc/docbook/*.5 "$1/usr/share/man/man5"
+install -Dm644 doc/docbook/*.8 "$1/share/man/man8"
+install -Dm644 doc/docbook/*.5 "$1/share/man/man5"
 

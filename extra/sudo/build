@@ -1,9 +1,9 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/usr \
-    --sbindir=/usr/bin \
-    --libexecdir=/usr/lib \
+    --prefix=/ \
+    --sbindir=/bin \
+    --libexecdir=/lib \
     --disable-pam-session \
     --disable-root-mailer \
     --disable-nls \

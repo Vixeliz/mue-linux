@@ -4,13 +4,13 @@
 sed -i 's/bash/sh/' install-sh
 
 ./configure \
-    --prefix=/usr \
-    --sbindir=/usr/bin \
+    --prefix= \
+    --sbindir=/bin \
     --disable-gettext
 
 make
 make \
     DIST_ROOT="$1" \
-    PKG_ROOT_SBIN_DIR=/usr/bin \
-    PKG_ROOT_LIB_DIR=/usr/lib \
+    PKG_ROOT_SBIN_DIR=/bin \
+    PKG_ROOT_LIB_DIR=/lib \
     install

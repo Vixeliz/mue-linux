@@ -4,7 +4,7 @@ patch -p1 < fontconfig-fix-1744377.patch
 
 ./configure \
     AUTOMAKE=/bin/true \
-    --prefix=/usr \
+    --prefix= \
     --localstatedir=/var \
     --sysconfdir=/etc \
     --with-xmldir=/etc/fonts \

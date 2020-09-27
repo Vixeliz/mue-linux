@@ -8,7 +8,7 @@ patch -p1 < fix-busybox-diff.patch
 sed -i 's/perl/:/g' configure
 
 ./configure \
-    --prefix=/usr \
+    --prefix= \
     --enable-vp8 \
     --enable-vp9 \
     --enable-experimental \

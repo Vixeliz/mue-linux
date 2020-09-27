@@ -7,4 +7,4 @@ go build \
 	-modcacherw \
 	-trimpath
 
-install -Dm755 todocli "$1/usr/bin/todocli"
+install -Dm755 todocli "$1/bin/todocli"

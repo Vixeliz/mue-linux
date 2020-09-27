@@ -23,10 +23,10 @@ export GO_LDFLAGS="-w -s"
     cd ..
 }
 
-export GOROOT_FINAL=/usr/lib/go
+export GOROOT_FINAL=/lib/go
 
 if [ -f "$KISS_ROOT/var/db/kiss/go/manifest" ]; then
-    export GOROOT_BOOTSTRAP=/usr/lib/go
+    export GOROOT_BOOTSTRAP=/lib/go
 else
     export GOROOT_BOOTSTRAP=$PWD/lib/go-bootstrap
 fi
@@ -40,23 +40,23 @@ export GOROOT=$PWD/go-current
 
 cd "$GOROOT"
 
-mkdir -p "$1/usr/bin" "$1/usr/lib/go/bin"
+mkdir -p "$1/bin" "$1/lib/go/bin"
 
-install -m755 "bin/go"    "$1/usr/lib/go/bin/go"
-install -m755 "bin/gofmt" "$1/usr/lib/go/bin/gofmt"
+install -m755 "bin/go"    "$1/lib/go/bin/go"
+install -m755 "bin/gofmt" "$1/lib/go/bin/gofmt"
 
-ln -s "/usr/lib/go/bin/go"    "$1/usr/bin"
-ln -s "/usr/lib/go/bin/gofmt" "$1/usr/bin"
+ln -s "/lib/go/bin/go"    "$1/bin"
+ln -s "/lib/go/bin/gofmt" "$1/bin"
 
-cp -a misc pkg src lib "$1/usr/lib/go"
+cp -a misc pkg src lib "$1/lib/go"
 
 # Remove unneeded files.
-rm -f  "$1/usr/share/go/doc/articles/wiki/get.bin"
-rm -f  "$1/usr/lib/go/pkg/tool/"*/api
-rm -rf "$1/usr/lib/go/pkg/bootstrap"
-rm -rf "$1/usr/lib/go/pkg/obj"
+rm -f  "$1/share/go/doc/articles/wiki/get.bin"
+rm -f  "$1/lib/go/pkg/tool/"*/api
+rm -rf "$1/lib/go/pkg/bootstrap"
+rm -rf "$1/lib/go/pkg/obj"
 
-cd "$1/usr/lib/go/src"
+cd "$1/lib/go/src"
 
 # Remove tests.
 find . -type f -a -name \*_test.go -delete

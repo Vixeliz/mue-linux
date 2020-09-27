@@ -23,8 +23,8 @@ build_grub() (
     cd "grub-${1##*=}"
 
     ./configure \
-        --prefix=/usr \
-        --sbindir=/usr/bin \
+        --prefix= \
+        --sbindir=/bin \
         --sysconfdir=/etc \
         --disable-werror \
         --disable-nls \
@@ -43,7 +43,7 @@ install -Dm0644 grub.default "$1/etc/default/grub"
 
 # Remove gdb debugging files.
 (
-    cd "$pkg_dir/usr/lib"
+    cd "$pkg_dir/lib"
 
     rm -f grub/*/*.module
     rm -f grub/*/*.image

@@ -1,9 +1,9 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/usr \
+    --prefix= \
     --sysconfdir=/etc \
-    --mandir=/usr/share/man \
+    --mandir=/share/man \
     --localstatedir=/var \
     --enable-static
 
