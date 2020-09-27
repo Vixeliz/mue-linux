@@ -5,7 +5,7 @@
     --syslibdir=/lib
 
 make
-make DESTDIR="$1" install
+make PREFIX=/ DESTDIR="$1" install
 
 mkdir -p "$1/bin"
 ln -s  /lib/ld-musl-x86_64.so.1 "$1/bin/ldd"
