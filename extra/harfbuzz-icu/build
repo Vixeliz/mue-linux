@@ -6,7 +6,7 @@ mkdir -p tmp
 export DESTDIR="$PWD/tmp"
 
 meson \
-    --prefix= \
+    --prefix=/ \
     -Dglib=enabled \
     -Dicu=enabled \
     -Dicu_builtin=false \

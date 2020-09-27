@@ -11,7 +11,7 @@ find . -type f -name meson.build -exec \
     sed -i "/subdir('tests')/d;/subdir('fuzzing')/d" {} +
 
 meson \
-    --prefix= \
+    --prefix=/ \
     -Dlibmount=disabled \
     -Dinstalled_tests=false \
     -Ddefault_library=both \
@@ -39,7 +39,7 @@ ninja -C build install
     export LDFLAGS="$LDFLAGS -L$1/lib/"
 
     meson \
-        --prefix= \
+        --prefix=/ \
         --sysconfdir=/etc \
         --mandir=/share/man \
         -Ddocs=false \

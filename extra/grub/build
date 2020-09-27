@@ -23,7 +23,7 @@ build_grub() (
     cd "grub-${1##*=}"
 
     ./configure \
-        --prefix= \
+        --prefix=/ \
         --sbindir=/bin \
         --sysconfdir=/etc \
         --disable-werror \

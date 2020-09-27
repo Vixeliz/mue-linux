@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
-make amalg   PREFIX=
-make install PREFIX= DESTDIR="$1"
+make amalg   PREFIX=/
+make install PREFIX=/ DESTDIR="$1"
 
 # Create these symlinks ourselves as luajit relies
 # on ldconfig to do so and musl does not provide it.

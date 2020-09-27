@@ -4,7 +4,7 @@
 sed -i 's/bash/sh/' install-sh
 
 ./configure \
-    --prefix= \
+    --prefix=/ \
     --sbindir=/bin \
     --disable-gettext
 

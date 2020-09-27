@@ -8,7 +8,7 @@ pkg-config --exists libudev || {
 }
 
 meson \
-    --prefix= \
+    --prefix=/ \
     --sysconfdir=/etc \
     --mandir=/share/man \
     --libexecdir=/lib \

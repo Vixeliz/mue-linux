@@ -7,8 +7,8 @@ export CFLAGS="$CFLAGS -DNO_POSIX_2008_LOCALE -D_GNU_SOURCE"
 
 ./Configure \
     -des \
-    -Dprefix=/ \
-    -Dvendorprefix=/ \
+    -Dprefix=// \
+    -Dvendorprefix=// \
     -Dusevendorprefix \
     -Duseshrplib \
     -Dusesoname \

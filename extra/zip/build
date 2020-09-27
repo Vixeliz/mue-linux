@@ -1,11 +1,11 @@
 #!/bin/sh -e
 
 make \
-    prefix= \
+    prefix=/ \
     CC="${CC:-cc} $CFLAGS $CXXFLAGS" \
     -f unix/Makefile generic
 
 make \
-    prefix="$1" \
+    prefix=/"$1" \
     MANDIR="$1/share/man/man1" \
     -f unix/Makefile install

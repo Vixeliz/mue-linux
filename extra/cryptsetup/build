@@ -3,7 +3,7 @@
 machine=$(cc -dumpmachine)
 
 ./configure \
-    --prefix=/ \
+    --prefix=// \
     --sbindir=/bin \
     --build="$machine" \
     --host="$machine" \

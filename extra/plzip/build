@@ -6,7 +6,7 @@
 (cd lzlib; ./configure; make)
 
 ./configure \
-    --prefix= \
+    --prefix=/ \
     CXXFLAGS="$CXXFLAGS -static -L$PWD/lzlib -I$PWD/lzlib"
 
 make

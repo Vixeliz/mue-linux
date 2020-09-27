@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=
+    --prefix=/
 
 make DESTDIR="$1" install

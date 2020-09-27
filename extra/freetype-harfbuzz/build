@@ -5,7 +5,7 @@ build_freetype() (
 
     CFLAGS="$CFLAGS -DDEFAULT_TT_INTERPRETER_VERSION=TT_INTERPRETER_VERSION_40" \
     ./configure \
-        --prefix= \
+        --prefix=/ \
         --enable-freetype-config \
         --with-harfbuzz="$2"
 
@@ -23,7 +23,7 @@ build_harfbuzz() (
 
     export DESTDIR="$1"
     meson \
-        --prefix= \
+        --prefix=/ \
         -Dpkg_config_path="$1/lib/pkgconfig" \
         -Ddefault_library=both \
         -Dglib=enabled \

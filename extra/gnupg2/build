@@ -3,7 +3,7 @@
 export LDFLAGS="$LDFLAGS -static"
 
 ./configure \
-    --prefix= \
+    --prefix=/ \
     --sbindir=/bin \
     --disable-gnutls
 

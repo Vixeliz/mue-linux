@@ -19,7 +19,7 @@ cd build
 #Do not use wpe if you are on wayland
 cmake -GNinja \
     -DCMAKE_BUILD_TYPE=MinSizeRel \
-    -DCMAKE_INSTALL_PREFIX= \
+    -DCMAKE_INSTALL_PREFIX=/ \
     -DLIB_INSTALL_DIR=/lib \
     -DPORT=GTK \
     -DENABLE_WAYLAND_TARGET=ON \

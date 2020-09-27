@@ -3,7 +3,7 @@
 ./configure \
     --cc="${CC:-cc}" \
     --cxx="${CXX:-c++}" \
-    --prefix= \
+    --prefix=/ \
     --enable-shared \
     --enable-gpl \
     --enable-version3 \

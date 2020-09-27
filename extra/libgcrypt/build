@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix= \
+    --prefix=/ \
     --sysconfdir=/etc \
     --mandir=/share/man \
     --localstatedir=/var \

@@ -8,7 +8,7 @@ sed -i 's/appstream-util//'        data/meson.build
 sed -i 's/desktop-file-validate//' data/meson.build
 
 meson build \
-    --prefix= \
+    --prefix=/ \
     --sysconfdir=/etc \
     --buildtype=release \
     -Dsynctex=disabled

@@ -3,7 +3,7 @@
 cd source
 
 ./configure \
-    --prefix= \
+    --prefix=/ \
     --sbindir=/bin
 
 make

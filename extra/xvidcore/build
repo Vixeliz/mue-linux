@@ -3,7 +3,7 @@
 cd build/generic
 
 ./configure \
-    --prefix=
+    --prefix=/
 
 make
 make DESTDIR="$1" install

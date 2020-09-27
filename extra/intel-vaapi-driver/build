@@ -6,7 +6,7 @@ export DESTDIR="$1"
 export CFLAGS="$CFLAGS -fcommon"
 
 meson \
-    --prefix= \
+    --prefix=/ \
     . output
 
 ninja -C output

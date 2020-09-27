@@ -3,7 +3,7 @@
 export DESTDIR="$1"
 
 cmake -B build \
-    -DCMAKE_INSTALL_PREFIX=
+    -DCMAKE_INSTALL_PREFIX=/
 
 cmake --build   build
 cmake --install build

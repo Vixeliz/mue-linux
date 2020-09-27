@@ -7,7 +7,7 @@
 
     python3 setup.py build
     python3 setup.py install \
-        --prefix= \
+        --prefix=/ \
         --root="$PWD/dist"
 
     # Use a glob to avoid having to figure out the Python
@@ -33,7 +33,7 @@ export CFLAGS="$CFLAGS -DGLX_X86_READONLY_TEXT"
 sed -i "/pre_args += '-DUSE_ELF_TLS'/d" meson.build
 
 meson \
-    --prefix= \
+    --prefix=/ \
     --sysconfdir=/etc \
     --mandir=/share/man \
     --localstatedir=/var \

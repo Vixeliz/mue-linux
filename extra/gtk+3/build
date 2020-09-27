@@ -12,7 +12,7 @@ sed -i 's/demos tests testsuite examples//' Makefile.am Makefile.in
 sed -i 's/docs m4macros/m4macros/'          Makefile.am Makefile.in
 
 ./configure \
-    --prefix= \
+    --prefix=/ \
     --sysconfdir=/etc \
     --localstatedir=/var \
     --enable-xkb \
