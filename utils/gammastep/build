@@ -8,7 +8,7 @@ patch -p1 < configure.patch
 autoreconf --verbose --force --install
 
 ./configure \
-	--prefix=
+	--prefix=/
 
 make
 

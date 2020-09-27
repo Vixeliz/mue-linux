@@ -3,8 +3,8 @@
 export DESTDIR="$1"
 
 meson \
-	--prefix= \
-	. build
+    --prefix=/ \
+    . build
 
 ninja -C build
 ninja -C build install

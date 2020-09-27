@@ -2,7 +2,6 @@ cairo
 cmake  make
 glib-networking
 gperf  make
-gst-plugins
 gtk+3
 harfbuzz-icu
 lcms
@@ -12,8 +11,8 @@ libtasn1
 libsoup
 libwebp
 mesa
+openjpeg2
 perl   make
 python make
 ruby   make
 sqlite
-wpebackend-fdo
