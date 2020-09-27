@@ -27,6 +27,6 @@ export PATH=$PATH:$PWD
 
 make configure-host
 make tooldir=/
-make DESTDIR="$1" tooldir=/ install
+make PREFIX=/ DESTDIR="$1" tooldir=/ install
 
 ln -sf ld.bfd "$1/bin/ld"
