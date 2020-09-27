@@ -9,7 +9,7 @@ Mue Linux is an attempt at a minimalistic linux system with strong ideals.
 You can find more information about the ideals here https://muevoid.org/ideals
 
 Huge thanks to dylanaraps for kiss linux which muelinux is based off of. See https://k1ss.org
-
+Also another thanks to carbslinux for inspiration and some build files! See carbslinux.org
 
 Here is an overview:
 - No rust
@@ -21,6 +21,7 @@ Here is an overview:
 - Not losing security at the cost of simplicity
 (why some choices are made such as libtasn1 for webkit2gtkor seatd wlroots)
 - Sta.li filesystem (I am looking into static linking vs dynamic linking)
+- Everything compiled from source no binary packages in official or community repos
 
 Note all of these if you don't agree with nothing stops you from packaging them for yourself.
 These just apply to the official repo and community repo(if there ever is one).
@@ -37,5 +38,4 @@ Reasons for certain packages:
 Most of these packages are mainly due to them being needed by me;
 however, I am going to split up the repo more at some point soon.
 
-For example things like goxel or grafx2.
 My goal is to have a flexible repo where it has a minimal base for people to build upon.
