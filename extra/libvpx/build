@@ -7,8 +7,11 @@ patch -p1 < fix-busybox-diff.patch
 # ourselves :-).
 sed -i 's/perl/:/g' configure
 
+# Get rid of error for prefix being set to /lib
+sed -i '679,681d' build/make/configure.sh
+
 ./configure \
-    --prefix=/ \
+    --prefix="/" \
     --enable-vp8 \
     --enable-vp9 \
     --enable-experimental \

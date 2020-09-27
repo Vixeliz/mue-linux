@@ -7,12 +7,12 @@
 
     python3 setup.py build
     python3 setup.py install \
-        --prefix=/ \
+        --prefix=/usr \
         --root="$PWD/dist"
 
     # Use a glob to avoid having to figure out the Python
     # version for the path below.
-    cd dist/lib/python*/site-packages
+    cd dist/usr/lib/python*/site-packages
 
     # Set the PYTHONPATH so python knows where to find mako.
     # The one liner simply appends the existing path and

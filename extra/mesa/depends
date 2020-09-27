@@ -9,4 +9,5 @@ m4            make
 meson         make
 pkgconf       make
 python        make
+wayland-protocols
 zlib
