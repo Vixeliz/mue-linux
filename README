@@ -21,6 +21,7 @@ Here is an overview:
 - Not losing security at the cost of simplicity
 (why some choices are made such as libtasn1 for webkit2gtkor seatd wlroots)
 - Sta.li filesystem (I am looking into static linking vs dynamic linking)
+- Everything compiled from source no binary packages in official or community repos
 
 Note all of these if you don't agree with nothing stops you from packaging them for yourself.
 These just apply to the official repo and community repo(if there ever is one).
