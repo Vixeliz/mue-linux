@@ -20,6 +20,7 @@ Here is an overview:
 - Emphasis at hacking your system and creating utilities(Thinking of ideas to promote this)
 - Not losing security at the cost of simplicity
 (why some choices are made such as libtasn1 for webkit2gtkor seatd wlroots)
+- Sta.li filesystem (I am looking into static linking vs dynamic linking)
 
 Note all of these if you don't agree with nothing stops you from packaging them for yourself.
 These just apply to the official repo and community repo(if there ever is one).

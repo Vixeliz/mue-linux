@@ -19,12 +19,12 @@ NO_INSTALL_HARDLINKS=1
 EOF
 
 ./configure \
-    --prefix=/usr \
-    --libexecdir=/usr/lib \
+    --prefix=/ \
+    --libexecdir=/lib \
     ac_cv_snprintf_returns_bogus=no \
     ac_cv_fread_reads_directories=yes
 
 make
 make DESTDIR="$1" install
 
-cp -rf man "$1/usr/share/man"
+cp -rf man "$1/share/man"

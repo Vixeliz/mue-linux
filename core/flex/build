@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/usr \
+    --prefix=/ \
     --disable-static \
     --enable-shared \
     ac_cv_func_malloc_0_nonnull=yes \
@@ -10,4 +10,4 @@
 make
 make DESTDIR="$1" install
 
-ln -s flex "$1/usr/bin/lex"
+ln -s flex "$1/bin/lex"

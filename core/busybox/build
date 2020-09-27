@@ -7,33 +7,33 @@ done
 # Build and install regular busybox.
 # This excludes utilities which require 'suid' to function.
 make CC="${CC:-cc}" HOSTCC="${CC:-cc}"
-make CONFIG_PREFIX="$1/usr" install
+make CONFIG_PREFIX="$1/" install
 
 # Rename the binary temporarily.
-mv "$1/usr/bin/busybox" "$1/usr/bin/busybox-nosuid"
+mv "$1/bin/busybox" "$1/bin/busybox-nosuid"
 
 # Build and install suid busybox.
 # This _only_ includes utlities which require 'suid' to function.
 cp -f .config-suid .config
 make CC="${CC:-cc}" HOSTCC="${CC:-cc}"
-make CONFIG_PREFIX="$1/usr" install
+make CONFIG_PREFIX="$1/" install
 
 # Aptly name the busybox binaries.
-mv -f "$1/usr/bin/busybox"        "$1/usr/bin/busybox-suid"
-mv -f "$1/usr/bin/busybox-nosuid" "$1/usr/bin/busybox"
+mv -f "$1/bin/busybox"        "$1/bin/busybox-suid"
+mv -f "$1/bin/busybox-nosuid" "$1/bin/busybox"
 
 # Install the non-suid symlinks.
-"$1/usr/bin/busybox" --list | while read -r bin; do
-    ln -s busybox "$1/usr/bin/$bin"
+"$1/bin/busybox" --list | while read -r bin; do
+    ln -s busybox "$1/bin/$bin"
 done
 
 # Install the suid symlinks.
-"$1/usr/bin/busybox-suid" --list | while read -r bin; do
-    ln -s busybox-suid "$1/usr/bin/$bin"
+"$1/bin/busybox-suid" --list | while read -r bin; do
+    ln -s busybox-suid "$1/bin/$bin"
 done
 
 # Set suid on busybox suid.
-chmod u+s "$1/usr/bin/busybox-suid"
+chmod u+s "$1/bin/busybox-suid"
 
 # The acpid command requires that this directory exist
 # and does not automatically create it..

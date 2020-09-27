@@ -9,8 +9,8 @@ chmod +x makeinfo
 export PATH=$PATH:$PWD
 
 ./configure \
-    --prefix=/usr \
-    --with-lib-path=/usr/lib:/usr/local/lib \
+    --prefix=/ \
+    --with-lib-path=/lib \
     --enable-targets=x86_64-pep \
     --disable-gold \
     --enable-lto \
@@ -26,7 +26,7 @@ export PATH=$PATH:$PWD
     --with-system-zlib
 
 make configure-host
-make tooldir=/usr
-make DESTDIR="$1" tooldir=/usr install
+make tooldir=/
+make DESTDIR="$1" tooldir=/ install
 
-ln -sf ld.bfd "$1/usr/bin/ld"
+ln -sf ld.bfd "$1/bin/ld"

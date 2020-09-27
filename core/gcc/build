@@ -25,10 +25,10 @@ esac
 export libat_cv_have_ifunc=no
 
 ../gcc/configure \
-    --prefix=/usr \
-    --libexecdir=/usr/lib \
-    --mandir=/usr/share/man \
-    --infodir=/usr/share/info \
+    --prefix=/ \
+    --libexecdir=/lib \
+    --mandir=/share/man \
+    --infodir=/share/info \
     --disable-multilib \
     --disable-symvers \
     --disable-libmpx \
@@ -60,15 +60,15 @@ find "$1" -name libgjsmalsa.a -exec rm -f {} +
 find "$1" -name libgij.a      -exec rm -f {} +
 
 # Some legacy programs will expect cc
-ln -s gcc "$1/usr/bin/cc"
+ln -s gcc "$1/bin/cc"
 
 # POSIX compliance.
-install -Dm755 ../c99 "$1/usr/bin/c99"
+install -Dm755 ../c99 "$1/bin/c99"
 
 # Symlink for LTO.
 {
-    mkdir -p "$1/usr/lib/bfd-plugins"
+    mkdir -p "$1/lib/bfd-plugins"
 
-    ln -s "/usr/lib/gcc/x86_64-pc-linux-musl/$2/liblto_plugin.so" \
-          "$1/usr/lib/bfd-plugins/liblto_plugin.so"
+    ln -s "/lib/gcc/x86_64-pc-linux-musl/$2/liblto_plugin.so" \
+          "$1/lib/bfd-plugins/liblto_plugin.so"
 }

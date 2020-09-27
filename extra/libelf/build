@@ -12,7 +12,7 @@ sed -i 's/as_fn_error.*libargp/: "/g' configure
 sed -i 's/color.*printversion../#/g' lib/Makefile.in
 
 ./configure \
-    --prefix=/usr \
+    --prefix=/ \
     --disable-symbol-versioning \
     --disable-debuginfod \
     --disable-nls
@@ -22,5 +22,5 @@ make -C lib
 make -C libelf
 make -C libelf DESTDIR="$1" install
 
-mkdir -p "$1/usr/lib/pkgconfig"
-cp -f config/libelf.pc "$1/usr/lib/pkgconfig/libelf.pc"
+mkdir -p "$1/lib/pkgconfig"
+cp -f config/libelf.pc "$1/lib/pkgconfig/libelf.pc"
