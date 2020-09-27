@@ -6,7 +6,7 @@ if kiss l cmake; then
     export DESTDIR="$1"
 
     cmake -B build \
-        -DCMAKE_INSTALL_PREFIX=// \
+        -DCMAKE_INSTALL_PREFIX=/ \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_USE_SYSTEM_CURL=True \
         -DCMAKE_USE_SYSTEM_EXPAT=True \
@@ -19,7 +19,7 @@ if kiss l cmake; then
 
 else
     ./configure \
-        --prefix=// \
+        --prefix=/ \
         --system-curl \
         --system-expat \
         --system-zlib \

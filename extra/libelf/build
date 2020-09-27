@@ -12,7 +12,7 @@ sed -i 's/as_fn_error.*libargp/: "/g' configure
 sed -i 's/color.*printversion../#/g' lib/Makefile.in
 
 ./configure \
-    --prefix=// \
+    --prefix=/ \
     --disable-symbol-versioning \
     --disable-debuginfod \
     --disable-nls
