@@ -7,7 +7,6 @@
     --with-ex-name=vim-ex \
     --with-view-name=vim-view \
     --disable-perlinterp \
-    --disable-pythoninterp \
     --disable-rubyinterp \
     --disable-netbeans \
     --disable-gpm \
@@ -15,7 +14,8 @@
     --disable-xim \
     --disable-gui \
     --disable-nls \
-    --without-x
+    --without-x \
+    --disable-pythoninterp
 
 make
 make DESTDIR="$1" install

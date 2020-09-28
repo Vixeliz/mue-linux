@@ -1,6 +1,7 @@
 #!/bin/sh -e
 
 patch -p1 < fix-musl.patch
+sed -i '239,244d' Source/WebKit/WebProcess/InjectedBundle/InjectedBundle.cpp
 
 # Remove gettext requirement.
 sed -i 's/ngettext/printf/g' Tools/MiniBrowser/gtk/BrowserDownloadsBar.c
@@ -47,4 +48,3 @@ cmake -GNinja \
 
 ninja
 ninja install
-
