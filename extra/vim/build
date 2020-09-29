@@ -15,7 +15,7 @@
     --disable-gui \
     --disable-nls \
     --without-x \
-    --disable-python3interp
+    --enable-python3interp=yes
 
 make
 make DESTDIR="$1" install
