@@ -39,7 +39,7 @@ chmod u+w "$1/lib/libpython"*
 {
     cd "$1/lib/python"*
     rm -rf test ./*/test ./*/tests
-    rm -rf pydoc* idlelib turtle* config-* ensurepip
+    rm -rf pydoc* idlelib turtle* ensurepip
 
     cd "$1/bin"
     rm -f pydoc* idle*

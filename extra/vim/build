@@ -14,7 +14,8 @@
     --disable-xim \
     --disable-gui \
     --disable-nls \
-    --without-x
+    --without-x \
+    --disable-python3interp
 
 make
 make DESTDIR="$1" install
