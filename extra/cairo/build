@@ -16,6 +16,6 @@ sed -i 's/test perf//g' Makefile.in
     --disable-trace \
     --disable-valgrind \
     --disable-gtk-doc-html
-
+#--disable-gobject
 make
 make DESTDIR="$1" install
