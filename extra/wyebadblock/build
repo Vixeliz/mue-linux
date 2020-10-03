@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+make
+make PREFIX=/ DESTDIR="$1" install

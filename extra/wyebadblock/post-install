@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cat <<EOF
+
+Installation instructions:
+
+Wyebadblock looks for adblocking rules in $HOME/.config/wyebadblock/easylist.txt
+Documentation can be found at https://github.com/jun7/wyebadblock
+
+vimb:
+		ln -s /lib/wyebrowser/adblock.so /lib/vimb
+
+EOF
