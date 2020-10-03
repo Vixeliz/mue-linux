@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+sed -i 's/xcb/ /g' Makefile
+
+make
+install -Dm755 dwl "$1/bin/dwl"

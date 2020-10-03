@@ -1,0 +1,10 @@
+libpng
+libjpeg-turbo
+meson             make
+pixman
+pkgconf           make
+samurai           make
+tllist            make
+wayland
+wayland-protocols make
+wlroots

@@ -1,8 +1,10 @@
+fcft
 fontconfig
 libxkbcommon
 ncurses make
 pixman
 python  make
 scdoc   make
+tllist
 wayland
 wayland-protocols make

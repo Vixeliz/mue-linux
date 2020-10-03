@@ -8,7 +8,7 @@ pango
 pcre
 samurai make
 scdoc
-swaybg
+#swaybg
 wayland
 wayland-protocols make
 wlroots

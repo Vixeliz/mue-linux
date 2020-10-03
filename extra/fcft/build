@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+sed -i 's|fcft/fcft.h|fcft.h|g'     fcft.c
+sed -i 's|fcft/stride.h|stride.h|g' fcft.c
+sed -i 's|fcft/fcft.h|fcft.h|g'     meson.build
+sed -i 's|fcft/stride.h|stride.h|g' meson.build
+sed -i "/subdir('doc'/d"            meson.build
+
+export DESTDIR="$1"
+
+meson \
+    --prefix=/usr \
+    --buildtype=release \
+    . build
+
+ninja -C build
+ninja -C build install
