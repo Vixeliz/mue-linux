@@ -26,7 +26,7 @@ build_harfbuzz() (
         --prefix=/ \
         -Dpkg_config_path="$1/lib/pkgconfig" \
         -Ddefault_library=both \
-        -Dglib=enabled \
+        -Dglib=disabled \
         -Dfreetype=enabled \
         -Dcairo=disabled \
         -Dicu=disabled \
