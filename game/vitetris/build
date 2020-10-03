@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+./configure \
+    --prefix=/
+
+make
+install -Dm755 tetris "$1/bin/vitetris"
