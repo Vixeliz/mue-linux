@@ -24,6 +24,7 @@ meson \
 	-Dbuild-examples=false \
 	-Dbuild-tests=false \
 	-Dvulkan=disabled \
+    -Dgtk_doc=false \
 	-Dmedia=none \
 	. build
 

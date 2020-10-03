@@ -3,10 +3,11 @@
 ./configure \
     --prefix=/usr \
     --sysconfdir=/etc \
-    --mandir=/usr/share/man \
-    --with-perl=module \
-    --with-proxy \
-    --enable-true-color
+    --with-screen=ncursesw \
+    --with-ssl \
+    --enable-gopher \
+    --with-zlib \
+    --enable-ipv6
 
 make
 make DESTDIR="$1" install

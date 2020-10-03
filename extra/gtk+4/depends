@@ -1,6 +1,7 @@
 atk
 fribidi
 gdk-pixbuf
+graphene
 libepoxy
 pango
 pkgconf make

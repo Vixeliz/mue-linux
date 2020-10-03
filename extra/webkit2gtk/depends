@@ -2,7 +2,7 @@ cairo
 cmake  make
 glib-networking
 gperf  make
-gtk+3
+gtk+4
 harfbuzz-icu
 lcms
 libXslt

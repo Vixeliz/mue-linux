@@ -1,3 +1,5 @@
 bison   make
 meson   make
 pkgconf make
+wayland
+wayland-protocols

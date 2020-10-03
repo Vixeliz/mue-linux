@@ -1,8 +1,9 @@
 #!/bin/sh -e
 
+autoreconf -vfi
+
 ./configure \
-    --prefix=/ \
-    --disable-image
+    --prefix=/
 
 make
 make DESTDIR="$1" install

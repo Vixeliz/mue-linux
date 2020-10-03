@@ -7,6 +7,8 @@ sed -i "s/BUILD_SPHINX_FALSE='#'/BUILD_SPHINX_FALSE=/" configure
 # Disable building tests.
 sed -i 's/test perf//g' Makefile.in
 
+#If you don't need gtk you can disable gobject to avoid glib for cairo
+
 ./configure \
     --prefix=/ \
     --disable-static \
@@ -15,8 +17,8 @@ sed -i 's/test perf//g' Makefile.in
     --enable-egl \
     --disable-trace \
     --disable-valgrind \
-    --disable-gtk-doc-html \
-    --disable-gobject
+    --disable-gtk-doc-html
+#    --disable-gobject
 
 make
 make DESTDIR="$1" install
