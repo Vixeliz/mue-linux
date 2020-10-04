@@ -1,0 +1,3 @@
+#!/bin/sh -e
+
+install -Dm755 pash "$1/bin/pash"
