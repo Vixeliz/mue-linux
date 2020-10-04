@@ -11,6 +11,9 @@ You can find more information about the ideals here https://muevoid.org/ideals
 Huge thanks to dylanaraps for kiss linux which muelinux is based off of. See https://k1ss.org
 Also another thanks to carbslinux for inspiration and some build files! See carbslinux.org
 
+Why games? These are mostly games from the kiss-games repo however I have chosen ones that I
+particularly enjoy and work without xorg libs.
+
 Here is an overview:
 - No rust
 - No bash
