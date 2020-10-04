@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+export GO111MODULE=on
+
+go build \
+    -modcacherw \
+    -trimpath
+
+install -Dm755 kp2 "$1/bin/kp2"
