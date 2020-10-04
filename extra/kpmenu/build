@@ -9,4 +9,3 @@ go build \
     -trimpath
 
 install -Dm755 kpmenu "$1/bin/kpmenu"
-install -Dm755 kpmenu-run "$1/bin/kpmenu-run"
