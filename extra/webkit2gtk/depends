@@ -7,8 +7,8 @@ harfbuzz-icu
 lcms
 libXslt
 libgcrypt
-libtasn1
 libsoup
+libtasn1
 libwebp
 mesa
 perl   make
