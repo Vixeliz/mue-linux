@@ -4,7 +4,7 @@
 export CFLAGS="$CFLAGS -fcommon"
 
 ./configure \
-    --prefix=/usr \
+    --prefix=/ \
     --sysconfdir=/etc \
     --enable-cgroup \
     --enable-unicode \

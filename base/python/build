@@ -9,6 +9,7 @@ EOF
 # Reported 20-27% performance improvements.
 # See: "PythonNoSemanticInterpositionSpeedup"
 export CFLAGS="$CFLAGS -fno-semantic-interposition"
+export CXXFLAGS="$CXXFLAGS -fno-semantic-interposition"
 export LDFLAGS="$LDFLAGS -fno-semantic-interposition"
 
 patch -p1 < python3-always-pip.patch
@@ -39,7 +40,7 @@ chmod u+w "$1/lib/libpython"*
 {
     cd "$1/lib/python"*
     rm -rf test ./*/test ./*/tests
-    rm -rf pydoc* idlelib turtle* ensurepip
+    rm -rf pydoc* idlelib turtle* config-* ensurepip
 
     cd "$1/bin"
     rm -f pydoc* idle*
