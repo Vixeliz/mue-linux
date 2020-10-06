@@ -1,4 +1,4 @@
 #!/bin/sh
 
 mkdir -p "$1/include/stb"
-install -Dm655 *.h "$1/include/stb/"
+install -Dm655 ./*.h "$1/include/stb/"
