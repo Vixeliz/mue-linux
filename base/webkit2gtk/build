@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+kiss l gst-plugins-base && streaming=ON
+
 patch -p1 < fix-musl.patch
 sed -i '239,244d' Source/WebKit/WebProcess/InjectedBundle/InjectedBundle.cpp
 
@@ -33,14 +35,14 @@ cmake -GNinja \
     -DCMAKE_SKIP_RPATH=ON \
     -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
     -DENABLE_INTL=OFF \
-    -DENABLE_MEDIASOURCE=OFF \
+    -DENABLE_MEDIASOURCE=${streaming:-OFF} \
     -DENABLE_SAMPLING_PROFILER=OFF \
     -DENABLE_GEOLOCATION=OFF \
     -DENABLE_INTROSPECTION=OFF \
     -DENABLE_SPELLCHECK=OFF \
-    -DENABLE_VIDEO=OFF \
+    -DENABLE_VIDEO=${streaming:-OFF} \
     -DENABLE_WEBGL=OFF \
-    -DENABLE_WEB_AUDIO=OFF \
+    -DENABLE_WEB_AUDIO=${streaming:-OFF} \
     -DUSE_LIBHYPHEN=OFF \
     -DUSE_LIBNOTIFY=OFF \
     -DUSE_LIBSECRET=OFF \
