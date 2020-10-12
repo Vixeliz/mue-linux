@@ -6,7 +6,7 @@ if kiss l cmake; then
     export DESTDIR="$1"
 
     cmake -B build \
-        -DCMAKE_INSTALL_PREFIX="" \
+        -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_USE_SYSTEM_CURL=True \
         -DCMAKE_USE_SYSTEM_EXPAT=True \
@@ -19,7 +19,7 @@ if kiss l cmake; then
 
 else
     ./configure \
-        --prefix=/ \
+        --prefix=/usr \
         --system-curl \
         --system-expat \
         --system-zlib \
@@ -29,5 +29,5 @@ else
     make DESTDIR="$1" install
 fi
 
-rm -rf "$1/doc"
-rm -rf "$1/share/cmake"*/Help
+rm -rf "$1/usr/doc"
+rm -rf "$1/usr/share/cmake"*/Help
