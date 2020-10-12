@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+git submodule update --init --recursive
+
+export DESTDIR="$1"
+
+cmake -H. -Bbuild \
+    -DCMAKE_BUILD_TYPE=RELEASE \
+    -DCMAKE_INSTALL_PREFIX="" \
+
+cmake --build build
+cmake --install build
