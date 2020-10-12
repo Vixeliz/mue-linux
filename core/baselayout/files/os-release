@@ -4,5 +4,5 @@ ID=mue
 BUILD_ID=rolling
 HOME_URL="https://muevoid.org"
 DOCUMENTATION_URL="https://muevoid.org"
-SUPPORT_URL="https://github.com/muevoid"
-BUG_REPORT_URL="https://github.com/muevoid"
+SUPPORT_URL="https://github.com/muevoid/mue-linux"
+BUG_REPORT_URL="https://github.com/muevoid/mue-linux"

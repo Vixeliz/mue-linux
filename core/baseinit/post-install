@@ -2,6 +2,8 @@
 
 cat <<EOF
 NOTE: If using encryption you must now install
-      the 'kiss-encryption' package.
+      the 'kiss-encryption' package from the
+      Community repository.
 
+SEE:  https://k1ss.org/news/20200511a
 EOF

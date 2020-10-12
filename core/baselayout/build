@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # Setup base directories.
-for d in boot dev etc home mnt var bin run; do
+for d in boot dev etc home mnt usr var opt run; do
     install -dm 755 "$1/$d"
 done
 
@@ -10,17 +10,26 @@ install -dm 555  "$1/sys"
 install -dm 0750 "$1/root"
 install -dm 1777 "$1/tmp"
 
-# Setup manpages directories.
-for d in 1 2 3 4 5 6 7 8; do
-    install -dm 755 "$1/share/man/man$d"
+# Setup /usr hierarchy.
+for d in bin include lib share src; do
+    install -dm 755 "$1/usr/$d"
 done
 
-#Add symlinks.
-ln -s / "$1/usr"
-ln -s /bin "$1/sbin"
+# Setup manpages directories.
+for d in 1 2 3 4 5 6 7 8; do
+    install -dm 755 "$1/usr/share/man/man$d"
+done
+
+# Add symlinks.
+ln -s usr/bin "$1/bin"
+ln -s usr/bin "$1/sbin"
+ln -s bin     "$1/usr/sbin"
+ln -s usr/lib "$1/lib"
+ln -s usr/lib "$1/lib64"
+ln -s lib     "$1/usr/lib64"
 
 # Setup /var.
-for d in cache local opt log/old lib/misc empty service run lock; do
+for d in cache local opt log/old lib/misc empty service; do
     install -dm 755 "$1/var/$d"
 done
 
@@ -28,6 +37,15 @@ install -dm 1777 "$1/var/tmp"
 install -dm 1777 "$1/var/spool/mail"
 
 ln -s spool/mail  "$1/var/mail"
+ln -s ../run      "$1/var/run"
+ln -s ../run/lock "$1/var/lock"
+
+# Setup /usr/local (usually for any programs installed outside package manager).
+for d in bin etc games include lib man sbin share src; do
+    install -dm 755 "$1/usr/local/$d"
+done
+
+ln -s ../man "$1/usr/local/share/man"
 
 # /etc skeleton files.
 for f in fstab group host.conf hosts issue os-release \

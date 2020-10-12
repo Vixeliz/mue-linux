@@ -1,3 +1,4 @@
-curl
-libressl
-zlib
+curl     make
+make    make
+libressl make
+zlib     make

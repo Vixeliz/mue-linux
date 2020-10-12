@@ -1,8 +1,6 @@
 #!/bin/sh -e
 
-sed -i 's/\/usr//g' kiss
-
-mkdir -p "$1/bin"
+mkdir -p "$1/usr/bin"
 
 # Install kiss utilities.
-cp -f kiss contrib/* "$1/bin/"
+cp -f kiss contrib/* "$1/usr/bin/"

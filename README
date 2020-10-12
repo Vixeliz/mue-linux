@@ -14,7 +14,12 @@ Also another thanks to carbslinux for inspiration and some build files! See carb
 Why games? These are mostly games from the kiss-games repo however I have chosen ones that I
 particularly enjoy and work without xorg libs.
 
+Notice currently Mue linux is expiremental and I'm not sure where I am going
+with it.
+
 Here is an overview:
+- Try to avoid gnu when possible however unlike wyverkiss I do not plan to have
+this be the main goal just as something where possible and reasonable to do.
 - No rust
 - No bash
 - Try to make things portable and allow for people to submit patches for certain architectures other then x86_64
@@ -24,6 +29,7 @@ Here is an overview:
 - Not losing security at the cost of simplicity
 (why some choices are made such as libtasn1 for webkit2gtkor seatd wlroots)
 - Everything compiled from source no binary packages in official or community repos
+
 
 Note all of these if you don't agree with nothing stops you from packaging them for yourself.
 These just apply to the official repo and community repo(if there ever is one).

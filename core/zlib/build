@@ -1,8 +1,11 @@
 #!/bin/sh -e
 
+# Otherwise, the build will fail with ld.lld
+export CFLAGS="$CFLAGS -fPIC"
+
 ./configure \
-    --prefix=/ \
-    --libdir=/lib \
+    --prefix=/usr \
+    --libdir=/usr/lib \
     --shared
 
 make
