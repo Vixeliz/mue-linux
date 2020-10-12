@@ -11,8 +11,10 @@ export PATH=$PATH:$PWD
 mkdir _build
 cd _build
 
+export LDFLAGS="-rdynamic"
+
 ../configure \
-    --prefix= \
+    --prefix=/ \
     --without-installed-readline \
     --disable-nls
 

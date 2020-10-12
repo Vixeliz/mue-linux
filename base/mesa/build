@@ -40,6 +40,9 @@ meson \
     --buildtype=release \
     -Dplatforms=wayland,drm \
     -Dgles3=true \
+    -Dgallium-drivers=i915 \
+    -Ddri-drivers=i965 \
+    -Dvulkan-drivers=intel \
     -Dglx=disabled \
     . output
 
