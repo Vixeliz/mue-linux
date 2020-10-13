@@ -2,12 +2,9 @@
 
 ./configure \
     --prefix=/usr \
-    --sysconfdir=/usr/etc
+    --sysconfdir=/etc
 
 make
 make DESTDIR="$1" install
 
-install -Dm 755 update-certdata.sh "$1/usr/etc/ssl"
-
-# Link ca-certificates to cert.pem
-ln -sfv ../cert.pem "$1/usr/etc/ssl/certs/ca-certificates.crt"
+install -Dm 755 update-certdata.sh "$1/etc/ssl"
