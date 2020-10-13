@@ -3,7 +3,7 @@
 autoreconf -vfi
 
 ./configure \
-    --prefix=/ \
+    --prefix=/usr \
     --enable-cxx \
     --without-x
 

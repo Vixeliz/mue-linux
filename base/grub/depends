@@ -1,5 +1,5 @@
 binutils      make
-byacc         make
+bison         make
 flex          make
 linux-headers make
 m4            make

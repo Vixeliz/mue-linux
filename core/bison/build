@@ -2,9 +2,8 @@
 
 ./configure \
     --prefix=/usr \
-    --enable-shared \
-    --enable-static \
-    --disable-rpath
+    --disable-nls \
+    --without-libtextstyle-prefix
 
 make
 make DESTDIR="$1" install

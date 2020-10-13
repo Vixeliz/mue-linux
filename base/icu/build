@@ -3,8 +3,8 @@
 cd source
 
 ./configure \
-    --prefix=/ \
-    --sbindir=/bin
+    --prefix=/usr \
+    --sbindir=/usr/bin
 
 make
 make DESTDIR="$1" install

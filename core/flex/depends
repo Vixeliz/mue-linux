@@ -1,2 +1,2 @@
-byacc make
+bison make
 m4    make
