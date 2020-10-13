@@ -7,8 +7,8 @@ export CFLAGS="$CFLAGS -DNO_POSIX_2008_LOCALE -D_GNU_SOURCE"
 
 ./Configure \
     -des \
-    -Dprefix=/ \
-    -Dvendorprefix=/ \
+    -Dprefix=/usr \
+    -Dvendorprefix=/usr \
     -Dusevendorprefix \
     -Duseshrplib \
     -Dusesoname \
@@ -40,4 +40,4 @@ find "$1" -name \*.bs        -exec rm -f {} +
 find "$1" -name \*.0 -type f -exec rm -f {} +
 
 # Fix permissions.
-find "$1/lib" -type f -exec chmod 644 {} \;
+find "$1/usr/lib" -type f -exec chmod 644 {} \;

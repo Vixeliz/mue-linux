@@ -7,10 +7,10 @@ done
 # Avoid repeating ourselves.
 mk() {
     make \
-        libdir=/lib/ \
-        bindir=/bin/ \
-        mandir=/share/man/ \
-        includedir=/include/ \
+        libdir=/usr/lib/ \
+        bindir=/usr/bin/ \
+        mandir=/usr/share/man/ \
+        includedir=/usr/include/ \
         "$@"
 }
 
