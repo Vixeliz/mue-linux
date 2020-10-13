@@ -1,9 +1,9 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/ \
-    --sbindir=/bin \
-    --with-udev-rules-dir=/lib/udev/rules.d \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --with-udev-rules-dir=/usr/lib/udev/rules.d \
     --disable-alsaconf \
     --disable-bat \
     --disable-xmlto \

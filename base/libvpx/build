@@ -11,7 +11,7 @@ sed -i 's/perl/:/g' configure
 sed -i '679,681d' build/make/configure.sh
 
 ./configure \
-    --prefix="/" \
+    --prefix=/usr \
     --enable-vp8 \
     --enable-vp9 \
     --enable-experimental \

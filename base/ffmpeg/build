@@ -3,7 +3,7 @@
 ./configure \
     --cc="${CC:-cc}" \
     --cxx="${CXX:-c++}" \
-    --prefix=/ \
+    --prefix=/usr \
     --enable-shared \
     --enable-gpl \
     --enable-version3 \
@@ -26,4 +26,4 @@
 make
 make DESTDIR="$1" install
 
-rm -rf "$1/share/ffmpeg/examples"
+rm -rf "$1/usr/share/ffmpeg/examples"

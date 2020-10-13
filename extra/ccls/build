@@ -5,7 +5,7 @@ sed -i '683s/override//' src/indexer.cc
 export DESTDIR="$1"
 
 cmake -B build \
-    -DCMAKE_INSTALL_PREFIX=/
+    -DCMAKE_INSTALL_PREFIX=/usr
 
 cmake --build build
 cmake --install build

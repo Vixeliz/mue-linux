@@ -3,8 +3,8 @@
 ln -s waf-2.0.18 waf
 
 python waf configure \
-    --prefix=/ \
-    --mandir=/share/man \
+    --prefix=/usr \
+    --mandir=/usr/share/man \
     --confdir=/etc/mpv \
     --enable-alsa \
     --enable-libass
