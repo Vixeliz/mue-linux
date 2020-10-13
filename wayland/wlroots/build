@@ -8,7 +8,7 @@ export CFLAGS="$CFLAGS -fcommon"
 export DESTDIR="$1"
 
 meson \
-	--prefix=/ \
+	--prefix=/usr \
 	-Dexamples=false \
         -Dlibcap=disabled \
         -Dlogind=disabled \

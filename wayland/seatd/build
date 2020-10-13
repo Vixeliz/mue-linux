@@ -2,8 +2,10 @@
 
 export DESTDIR="$1"
 
+export CFLAGS="-Wno-error"
+
 meson \
-    --prefix=/ \
+    --prefix=/usr \
     -Dseatd=enabled \
     -Dbuiltin=enabled \
     -Dlogind=disabled \

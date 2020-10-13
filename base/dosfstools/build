@@ -1,9 +1,9 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/ \
-    --sbindir=/bin \
-    --mandir=/share/man \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --mandir=/usr/share/man \
     --enable-compat-symlinks
 
 make

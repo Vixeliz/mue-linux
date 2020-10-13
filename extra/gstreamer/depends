@@ -1,3 +1,3 @@
-bison make
+byacc make
 glib
 meson make

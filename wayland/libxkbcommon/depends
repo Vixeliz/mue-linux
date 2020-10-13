@@ -1,4 +1,4 @@
-bison   make
+byacc   make
 meson   make
 pkgconf make
 wayland

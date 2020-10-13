@@ -3,7 +3,7 @@
 export LDFLAGS="-rdynamic"
 
 ./configure \
-    --prefix=/ \
+    --prefix=/usr \
     --enable-cscope \
     --enable-multibyte \
     --with-ex-name=vim-ex \

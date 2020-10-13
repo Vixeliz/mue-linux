@@ -1,11 +1,17 @@
 #!/bin/sh -e
 
 export DESTDIR="$1"
+export CC=/usr/bin/cc
 
 meson \
-    --prefix=/ \
+    --prefix=/usr \
     --buildtype=release \
     . output
 
 ninja -C output
 ninja -C output install
+
+mkdir -p "$1/usr/share/terminfo/f"
+
+cp output/f/foot "$1/usr/share/terminfo/f/foot"
+cp output/f/foot "$1/usr/share/terminfo/f/foot-direct"

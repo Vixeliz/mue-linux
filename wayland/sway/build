@@ -8,7 +8,7 @@
 export DESTDIR="$1"
 
 meson \
-    --prefix=/ \
+    --prefix=/usr \
     -Dexamples=false \
     -Dxwayland=disabled \
     . build

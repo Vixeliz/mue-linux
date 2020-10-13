@@ -1,11 +1,11 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/ \
-    --sbindir=/bin \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
     --sysconfdir=/etc \
     --rundir=/run \
-    --libexecdir=/lib/dhcpcd
+    --libexecdir=/usr/lib/dhcpcd
 
 make
 make DESTDIR="$1" install

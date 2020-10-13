@@ -7,10 +7,10 @@ sed -i 's,"more -s","less",g' main.c
 sed -i "s/CC=.*/CC='$CC'/"    configure
 
 cat > configure.local <<EOF
-PREFIX=/
-MANDIR=/share/man
-LIBDIR=/lib
-SBINDIR=/bin
+PREFIX=/usr
+MANDIR=/usr/share/man
+LIBDIR=/usr/lib
+SBINDIR=/usr/bin
 CC="${CC:-cc}"
 CFLAGS="$CFLAGS"
 LN="ln -sf"

@@ -10,7 +10,7 @@ sed -i 's/test perf//g' Makefile.in
 #If you don't need gtk you can disable gobject to avoid glib for cairo
 
 ./configure \
-    --prefix=/ \
+    --prefix=/usr \
     --disable-static \
     --enable-tee \
     --enable-glesv2 \

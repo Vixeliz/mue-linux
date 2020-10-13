@@ -3,8 +3,8 @@
 machine=$(cc -dumpmachine)
 
 ./configure \
-    --prefix=/ \
-    --sbindir=/bin \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
     --build="$machine" \
     --host="$machine" \
     --with-crypto_backend=gcrypt \

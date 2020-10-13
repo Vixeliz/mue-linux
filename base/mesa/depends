@@ -1,4 +1,4 @@
-bison        make
+byacc        make
 expat
 flex         make
 libdrm
