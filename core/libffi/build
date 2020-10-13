@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+sed -i '/assembler-with-cpp/s%\$<%$(top_srcdir)/libffi.map.in%' Makefile.in
+
 ./configure \
     --prefix=/usr \
     --with-pic
