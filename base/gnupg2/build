@@ -3,8 +3,8 @@
 export LDFLAGS="$LDFLAGS -static"
 
 ./configure \
-    --prefix=/ \
-    --sbindir=/bin \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
     --disable-gnutls
 
 make

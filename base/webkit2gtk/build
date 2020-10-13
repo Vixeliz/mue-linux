@@ -2,35 +2,25 @@
 
 kiss l gst-plugins-base && streaming=ON
 
+kiss l openjpeg2 && jpeg=ON
+
 patch -p1 < fix-musl.patch
-sed -i '239,244d' Source/WebKit/WebProcess/InjectedBundle/InjectedBundle.cpp
 
 # Remove gettext requirement.
 sed -i 's/ngettext/printf/g' Tools/MiniBrowser/gtk/BrowserDownloadsBar.c
 sed -i '/po_files \*\.po/d'  Source/WebCore/platform/gtk/po/CMakeLists.txt
 sed -i '/^GETTEXT_C/d'       Source/WebCore/platform/gtk/po/CMakeLists.txt
 
+sed -i '239,244d' Source/WebKit/WebProcess/InjectedBundle/InjectedBundle.cpp
+
 export DESTDIR="$1"
 
-mkdir build
-cd build
-
-#    -DCMAKE_BUILD_TYPE=MinRelSize \
-#Jit only works on some architectures
-#Many of these are personal preference and aren't needed afaik. Such as mediasource, video, audio, opengl, wpe, woff2, openjpeg. However I believe the following may be vital however not 100% sure.
-#Web Crypto
-#Do not use wpe if you are on wayland
-# Testing variables
-#-DENABLE_INTL=OFF \
-#-DENABLE_MEDIASOURCE=OFF \
-
-cmake -GNinja \
+cmake -B build \
     -DCMAKE_BUILD_TYPE=MinSizeRel \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DLIB_INSTALL_DIR=/usr/lib \
     -DPORT=GTK \
     -DENABLE_GLES2=ON \
-    -DUSE_OPENGL_ES=ON \
     -DENABLE_WAYLAND_TARGET=ON \
     -DCMAKE_SKIP_RPATH=ON \
     -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
@@ -46,13 +36,12 @@ cmake -GNinja \
     -DUSE_LIBHYPHEN=OFF \
     -DUSE_LIBNOTIFY=OFF \
     -DUSE_LIBSECRET=OFF \
-    -DUSE_OPENJPEG=OFF \
+    -DUSE_OPENJPEG=${jpeg:-OFF} \
     -DUSE_WOFF2=OFF \
     -DUSE_WPE_RENDERER=OFF \
     -DUSE_SYSTEMD=OFF \
     -DENABLE_WEB_CRYPTO=ON \
-    -DUSE_LD_GOLD=OFF \
     ..
 
-ninja
-ninja install
+cmake --build build
+cmake --install build

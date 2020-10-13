@@ -1,0 +1,14 @@
+cairo
+cmake make
+curl
+fontconfig
+freetype-harfbuzz
+glib
+lcms
+libjpeg-turbo
+libpng
+llvm
+openjpeg2
+pkgconf make
+tiff
+zlib

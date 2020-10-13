@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
 ./configure \
-    --prefix=/ \
-    --sbindir=/bin \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
     --enable-iproute2 \
     --enable-pkcs11 \
     --enable-plugins \

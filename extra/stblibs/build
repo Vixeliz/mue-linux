@@ -1,4 +1,4 @@
 #!/bin/sh
 
-mkdir -p "$1/include/stb"
-cp ./*.h "$1/include/stb/"
+mkdir -p "$1/usr/include/stb"
+cp ./*.h "$1/usr/include/stb/"

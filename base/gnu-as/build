@@ -1,33 +1,24 @@
 #!/bin/sh -e
 
-cat > makeinfo <<EOF
-#!/bin/sh
-printf 'makeinfo (GNU texinfo) 5.2\n'
-EOF
-
-chmod +x makeinfo
-export PATH=$PATH:$PWD
+# This gets rid of the check for ada on my machine at least won't pass this
+sed -i '5357,5381d' configure
 
 ./configure \
     --prefix=/usr \
-    --with-lib-path=/usr/lib:/usr/local/lib \
+    --build=x86_64-pc-linux-musl \
+    --host=x86_64-pc-linux-musl \
     --enable-targets=x86_64-pep \
     --disable-gold \
-    --enable-lto \
-    --enable-ld=default \
+    --enable-ld=no \
     --enable-plugins \
     --disable-multilib \
     --disable-werror \
-    --disable-gdb \
     --disable-nls \
-    --disable-readline \
     --disable-gprof \
     --with-mmap \
-    --with-system-zlib
+    --with-system-zlib \
+    --enable-libada=no
 
-make configure-host
-make tooldir=/usr
-make DESTDIR="$1" tooldir=/usr install
+make all-gas
 
-ln -s gas "$1/usr/bin/as"
-ln -sf ld.bfd "$1/usr/bin/ld"
+make DESTDIR="$1" install-gas

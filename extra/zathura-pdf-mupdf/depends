@@ -1,8 +1,0 @@
-cairo
-jbig2dec
-libjpeg-turbo
-libressl
-libmupdf make
-meson make
-openjpeg2
-zathura
