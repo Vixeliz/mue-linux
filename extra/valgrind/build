@@ -3,5 +3,10 @@
 ./configure \
   --prefix=/usr
 
+for d in memcheck cachegrind callgrind helgrind drd massif dhat lackey none exp-bbv; do
+    sed -i '/lgcc/d' $d/Makefile
+    sed -i '/libgcc/d' $d/Makefile
+done
+
 make
 make DESTDIR="$1" install
