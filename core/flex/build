@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-sed -i 's/ | \$(FLEX)$//' doc/Makefile.in
+sed -i "s/ | \$(FLEX)$//" doc/Makefile.in
 
 ./configure \
     --prefix=/usr \

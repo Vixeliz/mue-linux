@@ -3,10 +3,10 @@
 export DESTDIR="$1"
 
 cmake -B build \
-    -DCMAKE_INSTALL_PREFIX="/" \
-    -DCMAKE_INSTALL_LIBDIR=lib \
-    -DCMAKE_C_FLAGS="-I/include/harfbuzz" \
-    -DCMAKE_CXX_FLAGS="-I/include/harfbuzz"
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+    -DCMAKE_C_FLAGS="-I/usr/include/harfbuzz" \
+    -DCMAKE_CXX_FLAGS="-I/usr/include/harfbuzz"
 
 cmake --build build
 cmake --install build
