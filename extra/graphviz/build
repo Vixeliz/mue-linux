@@ -2,11 +2,17 @@
 
 export DESTDIR="$1"
 
+# Remove libtool
+sed -i '/LTDL_INCLUDE_DIRS/d' lib/gvc/CMakeLists.txt
+sed -i '/LTDL_LIBRARY/d' lib/gvc/CMakeLists.txt
+sed -i '/LTDL_LIBRARIES/d' lib/gvc/CMakeLists.txt
+
+
 cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_INSTALL_LIBDIR=/usr/lib \
     -DCMAKE_C_FLAGS="-I/usr/include/harfbuzz" \
-    -DCMAKE_CXX_FLAGS="-I/usr/include/harfbuzz"
+    -DCMAKE_CXX_FLAGS="-I/usr/include/harfbuzz" \
+    -Denable_ltdl=OFF
 
 cmake --build build
 cmake --install build
