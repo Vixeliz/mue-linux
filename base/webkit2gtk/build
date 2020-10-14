@@ -41,7 +41,7 @@ cmake -B build \
     -DUSE_WPE_RENDERER=OFF \
     -DUSE_SYSTEMD=OFF \
     -DENABLE_WEB_CRYPTO=ON \
-    ..
+    .
 
 cmake --build build
 cmake --install build
