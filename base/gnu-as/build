@@ -9,7 +9,7 @@ sed -i '5357,5381d' configure
     --host=x86_64-pc-linux-musl \
     --enable-targets=x86_64-pep \
     --disable-gold \
-    --enable-ld=yes \
+    --enable-ld=no \
     --enable-plugins \
     --disable-multilib \
     --disable-werror \
@@ -20,7 +20,5 @@ sed -i '5357,5381d' configure
     --enable-libada=no
 
 make all-gas
-make all-ld
 
 make DESTDIR="$1" install-gas
-make DESTDIR="$1" install-ld
