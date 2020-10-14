@@ -6,4 +6,4 @@ go build \
     -modcacherw \
     -trimpath
 
-install -Dm755 scc "$1/bin/scc"
+install -Dm755 scc "$1/usr/bin/scc"
