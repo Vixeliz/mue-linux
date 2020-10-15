@@ -11,6 +11,9 @@ export PATH=$PATH:$PWD
 mkdir _build
 cd _build
 
+# Remove check for ada
+sed -i '5302,5324d' ../configure
+
 ../configure \
     --prefix=/usr \
     --without-installed-readline \

@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-make amalg   PREFIX=/usr
+make CC=clang LDFLAGS="-lunwind" PREFIX=/usr
 make install PREFIX=/usr DESTDIR="$1"
 
 # Create these symlinks ourselves as luajit relies
