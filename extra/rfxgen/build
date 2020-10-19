@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+cd src
+
+$CC -o rfxgen rfxgen.c external/tinyfiledialogs.c -s -Iexternal -no-pie -lraylib
+
+install -Dm755 rfxgen "$1/usr/bin/rfxgen"
