@@ -7,6 +7,7 @@
     --disable-rpath-hack \
     --with-pkg-config-libdir=/usr/lib/pkgconfig \
     --with-shared \
+    --with-termlib \
     --enable-widec \
     --without-ada \
     --without-tests \

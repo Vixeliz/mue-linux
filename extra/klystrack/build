@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+rm -rf kylstron
+git clone https://github.com/kometbomb/klystron.git
+
+make
+make DESTDIR="$1" PREFIX=/usr install
