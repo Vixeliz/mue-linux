@@ -18,8 +18,6 @@ Notice currently Mue linux is expiremental and I'm not sure where I am going
 with it.
 
 Here is an overview:
-- Try to avoid gnu when possible however unlike wyverkiss I do not plan to have
-this be the main goal just as something where possible and reasonable to do.
 - No rust
 - No bash
 - Try to make things portable and allow for people to submit patches for certain architectures other then x86_64

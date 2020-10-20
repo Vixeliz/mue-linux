@@ -1,6 +1,8 @@
 #!/bin/sh -e
 
 tar xvf 935d223be5454015526bb5ca2258dd8cca71bc7d
+#tar xvf bfbe82e2064635ce57dceb2581c514bdff6fc12b
+#cd flatwhatson-emacs-bfbe82e
 cd masm11-emacs-935d223
 
 ./autogen.sh
@@ -13,10 +15,11 @@ cd masm11-emacs-935d223
     --without-toolkit-scroll-bars \
     --without-dbus \
     --without-gconf \
-    --without-gsettings \
+    --with-gsettings \
     --with-xpm=no \
     --with-gnutls=yes \
     --without-makeinfo \
+    --with-nativecomp \
     --with-json=yes
 
 mkdir -p "$1/usr/share/emacs/site-lisp"

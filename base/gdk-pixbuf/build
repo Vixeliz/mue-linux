@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+kiss l gobject-introspection && gobir=true
+
 export DESTDIR="$1"
 
 sed -i "/subdir('tests')/d" meson.build
@@ -8,7 +10,7 @@ meson \
     --prefix=/usr \
     --sysconfdir=/etc \
     --mandir=/usr/share/man \
-    -Dgir=false \
+    -Dgir=${gobir:-false} \
     -Djasper=false \
     -Dpng=true \
     -Ddocs=false \
