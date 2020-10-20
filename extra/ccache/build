@@ -1,10 +1,12 @@
 #!/bin/sh -e
 
-./configure \
-    --prefix=/ \
-    --sysconfdir=/etc \
-    --mandir=/share/man \
-    --localstatedir=/var
+export DESTDIR="$1"
+
+cmake -B build \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib
+
+cd build
 
 make
 
