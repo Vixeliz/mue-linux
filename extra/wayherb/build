@@ -1,4 +1,7 @@
 #!/bin/sh -e
 
-./build
-install -Dm755 wayherb "$1/usr/bin/wayherb"
+wayland-scanner client-header lib/wlr-layer-shell-unstable-v1.xml lib/wlr-layer-shell-unstable-v1.h
+wayland-scanner private-code lib/wlr-layer-shell-unstable-v1.xml lib/wlr-layer-shell-unstable-v1.c
+
+make
+install -Dm755 bin/wayherb "$1/usr/bin/wayherb"

@@ -5,6 +5,14 @@ tar xvf 935d223be5454015526bb5ca2258dd8cca71bc7d
 #cd flatwhatson-emacs-bfbe82e
 cd masm11-emacs-935d223
 
+# This removes the section that causes an error with no icons
+sed -i '/No icon/d' src/xfns.c
+sed -i '/No icon/d' src/pgtkfns.c
+sed -i '1475d' src/xfns.c
+sed -i '1511d' src/xfns.c
+sed -i '555d' src/pgtkfns.c
+sed -i '586d' src/pgtkfns.c
+
 ./autogen.sh
 ./configure \
     --prefix=/usr \
