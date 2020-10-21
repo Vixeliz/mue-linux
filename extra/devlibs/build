@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir -p "$1/usr/include/devlibs"
+cp stb/*.h "$1/usr/include/devlibs/"
+cp cute/*.h "$1/usr/include/devlibs/"

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-mkdir -p "$1/usr/include/stb"
-cp ./*.h "$1/usr/include/stb/"
