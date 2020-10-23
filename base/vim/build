@@ -1,7 +1,5 @@
 #!/bin/sh -e
 
-export LDFLAGS="-rdynamic"
-
 ./configure \
     --prefix=/usr \
     --enable-cscope \
@@ -17,7 +15,7 @@ export LDFLAGS="-rdynamic"
     --disable-gui \
     --disable-nls \
     --without-x \
-    --enable-python3interp=yes
+    --enable-python3interp=no
 
 make
 make DESTDIR="$1" install
