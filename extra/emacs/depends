@@ -3,7 +3,6 @@ cairo
 giflib
 gnutls
 gtk+3
-jansson
 lcms
 libjpeg-turbo
 libpng
