@@ -12,7 +12,7 @@ mkdir _build
 cd _build
 
 # Remove check for ada
-sed -i '5302,5324d' ../configure
+sed -i '5307,5331d' ../configure
 
 ../configure \
     --prefix=/usr \
