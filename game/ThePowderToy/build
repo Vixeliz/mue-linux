@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+CC=cc
+CXX=c++
+
+sed -i '/X11/d' SConscript
+
+scons --luajit -j8 --nofft
