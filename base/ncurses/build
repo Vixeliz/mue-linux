@@ -8,7 +8,6 @@
     --with-pkg-config-libdir=/usr/lib/pkgconfig \
     --with-shared \
     --enable-widec \
-    --with-termlib \
     --without-ada \
     --without-tests \
     --without-debug \
