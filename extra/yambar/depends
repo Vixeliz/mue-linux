@@ -1,0 +1,11 @@
+alsa-lib
+fcft 
+json-c
+meson             make
+pixman
+pkgconf           make
+samurai           make
+tllist            make
+wayland
+wayland-protocols make
+yaml

@@ -1,0 +1,19 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+sed -i "/subdir('doc')/d" meson.build
+sed -i "/mpd/d" plugin.c
+sed -i "/mpd/d" modules/meson.build
+
+meson \
+    --prefix=/usr \
+    -Dwerror=false \
+    -Dbackend-x11=disabled \
+    . build
+
+ninja -C build
+ninja -C build install
+
+# Sample config
+install -Dm755 examples/laptop.conf "$1/etc/yambar/config.yml"
