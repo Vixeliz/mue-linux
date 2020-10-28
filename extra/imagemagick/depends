@@ -1,0 +1,5 @@
+fontconfig
+libjpeg-turbo
+libpng
+libwebp
+pkgconf make
