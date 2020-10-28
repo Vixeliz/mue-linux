@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+make
+install -Dm755 badwolf "$1/usr/bin/badwolf"
