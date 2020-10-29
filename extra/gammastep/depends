@@ -1,8 +1,0 @@
-autoconf make
-automake make
-glib
-libdrm
-libffi
-libtool make
-wayland
-zlib
