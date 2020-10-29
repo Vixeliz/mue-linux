@@ -1,5 +1,5 @@
-NAME="MUE Linux"
-PRETTY_NAME="MUE Linux"
+NAME="MUE"
+PRETTY_NAME="MUE"
 ID=mue
 BUILD_ID=rolling
 HOME_URL="https://muevoid.org"
