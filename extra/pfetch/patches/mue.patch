@@ -1,0 +1,26 @@
+--- pfetch
++++ pfetch
+@@ -1462,6 +1462,15 @@
+ 				${c2} -_______\\
+ 			EOF
+         ;;
++        
++        MUE*)
++            read_ascii 5 <<-EOF
++				${c2} __  __ 
++				${c2}|  \/  |
++				${c2}| |\/| |
++				${c2}|_|  |_|UE
++			EOF
++        ;;
+ 
+         *)
+             # On no match of a distribution ascii art, this function calls
+@@ -1511,6 +1520,7 @@
+     # '[m':    Clear bold.
+     # '[%sA':  Move the cursor up '$ascii_height' amount of lines.
+     printf '[1m%s[m[%sA' "$ascii" "$ascii_height" >&6
++
+ }
+ 
+ main() {
