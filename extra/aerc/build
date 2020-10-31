@@ -1,4 +1,4 @@
 #!/bin/sh -e
 
-make nogui
+make PREFIX=/usr
 make DESTDIR="$1" PREFIX=/usr install

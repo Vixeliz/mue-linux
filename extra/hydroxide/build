@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+export GO111MODULE=on
+
+cd cmd/hydroxide
+
+go build \
+    -modcacherw \
+    -trimpath
+
+install -Dm755 hydroxide "$1/usr/bin/hydroxide"
