@@ -1,5 +1,6 @@
 Packages that need updates but have problems atm:
 socat(Shows up as outdated but new version is beta)
+icu (causes problems with webkit2gtk for the time being will fix soon)
 
 Some pkgs that currently cant be built offline:
 any git packages
