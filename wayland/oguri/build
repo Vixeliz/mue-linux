@@ -4,7 +4,6 @@ export DESTDIR="$1"
 
 meson \
     --prefix=/usr \
-    --buildtype=release \
     . build
 
 ninja -C build
