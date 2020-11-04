@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 sed -i '/javascript/s/FALSE/TRUE/g' config.h
-sed -i 's/new_browser(window, NULL/new_browser(window, \"https:\/\/duckduckgo.com\"/g' badwolf.c
+sed -i 's/new_browser(window, NULL/new_browser(window, \"https:\/\/start.duckduckgo.com\"/g' badwolf.c
 
 make
 install -Dm755 badwolf "$1/usr/bin/badwolf"
