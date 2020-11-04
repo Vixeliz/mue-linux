@@ -1,4 +1,6 @@
 #!/bin/sh -e
 
+sed -i '/javascript/s/FALSE/TRUE/g' config.h
+
 make
 install -Dm755 badwolf "$1/usr/bin/badwolf"
