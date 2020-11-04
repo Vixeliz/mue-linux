@@ -14,7 +14,7 @@ sed -i '5357,5381d' configure
     --with-mmap \
     --with-system-zlib
 
-gmake all-gas
-gmake DESTDIR="$1" install-gas
+make all-gas
+make DESTDIR="$1" install-gas
 
 ln -s gas "$1/usr/bin/as"
