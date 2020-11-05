@@ -1,7 +1,10 @@
 #!/bin/sh -e
 
-wayland-scanner client-header lib/wlr-layer-shell-unstable-v1.xml lib/wlr-layer-shell-unstable-v1.h
-wayland-scanner private-code lib/wlr-layer-shell-unstable-v1.xml lib/wlr-layer-shell-unstable-v1.c
+export DESTDIR="$1"
 
-make
-install -Dm755 bin/wayherb "$1/usr/bin/wayherb"
+meson \
+    --prefix=/usr \
+    . build
+
+ninja -C build
+ninja -C build install
