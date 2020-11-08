@@ -1,3 +1,0 @@
-#!/bin/sh -e
-
-install -Dm644 ./*.ttf -t "$1/usr/share/fonts/TTF/"
