@@ -2,15 +2,7 @@
 
 patch -p1 < fix-busybox-diff.patch
 
-# Remove the perl requirement from configure
-# as we have removed the perl requirement
-# ourselves :-).
-sed -i 's/perl/:/g' configure
-
-# Get rid of error for prefix being set to /lib
-sed -i '679,681d' build/make/configure.sh
-
-./configure \
+CC=cc CXX=c++ ./configure \
     --prefix=/usr \
     --enable-vp8 \
     --enable-vp9 \
@@ -28,5 +20,5 @@ sed -i '679,681d' build/make/configure.sh
     --disable-install-bins \
     --as=nasm
 
-make
-make DESTDIR="$1" install
+gmake
+gmake DESTDIR="$1" install
