@@ -1,0 +1,7 @@
+pycairo
+pygobject
+gtk+3
+mypaint-brushes
+libmypaint
+numpy
+swig

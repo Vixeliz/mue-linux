@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+mkdir -p "$1/usr/bin"
+mv intltool "$1/usr/bin/intltool"
+for i in merge update extract perl ; do
+    ln -sf /usr/bin/intltool "$1/usr/bin/intltool-$i"
+done
