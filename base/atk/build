@@ -10,7 +10,7 @@ meson \
     --sysconfdir=/etc \
     --mandir=/usr/share/man \
     -Ddocs=false \
-    -Dintrospection=false \
+    -Dintrospection=true \
     . output
 
 ninja -C output

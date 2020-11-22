@@ -30,7 +30,7 @@ sed -i 's/docs m4macros/m4macros/'          Makefile.am Makefile.in
     --disable-glibtest \
     --disable-nls \
     --disable-installed-tests \
-    --enable-introspection=no \
+    --enable-introspection=yes \
     --enable-colord=no \
     --disable-x11-backend \
     --enable-wayland-backend \

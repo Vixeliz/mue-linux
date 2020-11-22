@@ -12,11 +12,14 @@ sed -i '/po_files \*\.po/d'  Source/WebCore/platform/gtk/po/CMakeLists.txt
 sed -i '/^GETTEXT_C/d'       Source/WebCore/platform/gtk/po/CMakeLists.txt
 
 # Fix wayland build
-sed -i '239,244d' Source/WebKit/WebProcess/InjectedBundle/InjectedBundle.cpp
+#sed -i '239,244d' Source/WebKit/WebProcess/InjectedBundle/InjectedBundle.cpp
 
 # Fix clang building
 sed -i '/LC_ALL/d' Source/JavaScriptCore/jsc.cpp
 sed -i '/WTFLogAlways/d' Source/JavaScriptCore/jsc.cpp
+
+# Fix icu 68
+echo 'add_compile_definitions("U_DEFINE_FALSE_AND_TRUE=1")' >> Source/WTF/wtf/CMakeLists.txt
 
 export DESTDIR="$1"
 

@@ -28,6 +28,7 @@ build_harfbuzz() (
         -Ddefault_library=both \
         -Dglib=enabled \
         -Dfreetype=enabled \
+        -Dintrospection=enabled \
         -Dcairo=disabled \
         -Dicu=disabled \
         -Dbenchmark=disabled \

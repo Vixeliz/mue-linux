@@ -1,5 +1,6 @@
 fontconfig
 glib
+gobject-introspection
 libffi
 libpng
 mesa

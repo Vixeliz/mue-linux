@@ -1,6 +1,7 @@
 bzip2
 expat
 glib
+gobject-introspection
 libdrm
 libpng
 mesa

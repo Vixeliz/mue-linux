@@ -1,6 +1,7 @@
 atk
 fribidi
 gdk-pixbuf
+gobject-introspection
 libepoxy
 pango
 pkgconf make
